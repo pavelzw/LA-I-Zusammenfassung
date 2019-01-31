@@ -1,22 +1,77 @@
 \documentclass[a6paper,11pt,print,grid=front]{kartei}
-
-\usepackage[utf8]{inputenc} %UTF8
+\usepackage{style}
 
 \begin{document}
-	\begin{karte}[Lebensphilosophie]{Wie lautet die Antwort auf die Frage nach dem Leben dem Universum und dem Ganzen Rest ?}[prüfungsrelevant]
-	42
-	\end{karte}
-	\begin{karte}[Zahlenkunde]{Was ist der Unterschied in der Verwendung von Drölf und $n$ bei Ihnen?}
-	$n$ wird verwendet für Zahlen bis hin zu verdammt groß, Drölf nur bis hin zu verdammt.
-	\end{karte}
-	\section*{Informatik}
-	\subsection*{Spaß mit Verweisen}
-	%Den Kommentar im Stil ändern
-	\renewcommand{\kommentarstil}{\textsc}
-	\begin{karte}{Was ist verschränkte Rekursion ?}[ein Beispiel für Label]
-	\label{karte:antwort} Siehe Karte \ref{karte:frage}
-	\end{karte}
-	\begin{karte}{Was ist die Antwort auf Karte \ref{karte:antwort} ?}
-	\label{karte:frage}		Hier kommt man eigentlich gar nicht hin. Hier gibt es also nichts zu sehen, bitte blättern sie unauffällig weiter.
-	\end{karte}
+\section*{Grundbegriffe}
+\subsection*{Mengen}
+
+\begin{karte}{Definition Menge}
+    Eine Zusammenfassung gewisser unterscheidbarer Objekte, 
+    der sogenannten Elemente dieser Menge.
+\end{karte}
+\begin{karte}{Definition Mächtigkeit}
+    Die Anzahl der Elemente der Menge. Ist die Menge unendlich, 
+    so ist die Mächtigkeit \( \infty \).
+\end{karte}
+\begin{karte}{Produkt von Mengen}
+    \[ A \times B := \set{ (a,b) \;\vert \; 
+    a \in A, b \in B }. \]
+\end{karte}
+\subsection*{Relationen}
+\begin{karte}{Definition Relation}
+    Eine Relation auf einer Menge \(X\)  ist eine Teilmenge 
+    von \( X \times X \).
+\end{karte}
+\begin{karte}{Definition Äquivalenzrelation}
+    Eine Äquivalenzrelation ist:
+    \begin{description}
+        \item[reflexiv] \( \forall \, x \in X : x \sim x \).
+        \item[symmetrisch] \( x \sim y \Rightarrow y \sim x \).
+        \item[transitiv] \( x \sim y \wedge y \sim z \Rightarrow 
+        x \sim z \).
+    \end{description}
+\end{karte}
+\begin{karte}{Definition Äquivalenzklasse}
+    \[ [ x ] := \set{ y \in X \;\vert \; y \sim x }. \]
+    Ein Element einer Äquivalenzklasse \( [x] \) heißt 
+    Vertreter oder Repräsentant von \( [x] \).
+\end{karte}
+\begin{karte}{Definition Quotientenmenge}
+    Die Menge aller Äquivalenzklassen 
+    \[ X / \sim := \set{ [x] \;\vert \; x \in X } \]
+    ist die Quotientenmenge von \( X \) nach \( \sim \).
+\end{karte}
+\begin{karte}{Definition Kongruenz modulo \(n\)}
+    Die Äquivalenzrelation \( \equiv_n \) auf \( \Z \) beschreibt die 
+    Kongruenz modulo \(n\):
+    \[ x \equiv_n y \Leftrightarrow n \;\vert \; (x-y) 
+    \ (\text{\glqq{}} n \text{ teilt } x-y \text{\grqq{}}). \] 
+\end{karte}
+\begin{karte}{Quotientenmenge Kongruenz modulo \(n\)}
+    Die Quotientenmenge wird mit \( \Z / n\Z \) bezeichnet. \\
+    Sie enthält genau \(n\) Äquivalenzklassen, nämlich 
+    \( [0], \ldots, [n-1] \).
+\end{karte}
+\begin{karte}{Definition teilweise Ordnung}
+    Eine teilweise Ordnung \( \prec \) ist:
+    \begin{description}
+        \item[reflexiv] \( \forall \, x \in X : x \prec x \).
+        \item[antisymmetrisch] \( x \prec y \wedge y \prec x 
+        \Rightarrow y = x \).
+        \item[transitiv] \( x \prec y \wedge y \prec z \Rightarrow 
+        x \prec z \).
+    \end{description}
+    Eine Menge \(X\) mit der teilweisen Ordnung \( \prec \) nennt 
+    man auch teilweise geordnete Menge.\\
+    Gilt für je zwei Elemente \( x,y \) der Menge \( x \prec y \) 
+    oder \( y \prec x \), so ist \(X\) streng geordnet.
+\end{karte}
+\begin{karte}{Definition obere Schranke}
+    Ein Element \( s \in X \) ist eine obere Schranke für 
+    \( T \subset X \), wenn \( z \prec s \,\forall \, z \in T \) 
+    gilt.\\
+    Ein Element \( m \in X \) ist maximal, wenn aus 
+    \( m \prec z \) stets \( m = z \) folgt.
+\end{karte}
+
 \end{document}
