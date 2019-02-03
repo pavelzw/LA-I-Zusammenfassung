@@ -4,7 +4,6 @@
 \begin{document}
 \section*{Grundbegriffe}
 \subsection*{Mengen}
-
 \begin{karte}{Definition Menge}
     Eine Zusammenfassung gewisser unterscheidbarer Objekte, 
     der sogenannten Elemente dieser Menge.
@@ -73,5 +72,101 @@
     Ein Element \( m \in X \) ist maximal, wenn aus 
     \( m \prec z \) stets \( m = z \) folgt.
 \end{karte}
-
+\subsection*{Abbildungen}
+\begin{karte}{Definition Abbildung}
+    Eine Abbildung \(f : X \rightarrow Y\) ist eine Vorschrift, 
+    durch die jedem \(x \in X \) genau ein Element \(f(x) \in Y\)
+    zugeordnet wird:  \\
+    \[ x \mapsto f(x)\] \\
+     \( f(x)\) ist das Bild von \(x\). \\
+    Der Definitionsbereich von \(f\) ist \(X\). \\
+    Der Zielbereich von \(f\) ist \(Y\). 
+\end{karte}
+\begin{karte}{Definition Bild und Urbild}
+    \(f : X \rightarrow Y\) ist eine Abbildung. \\
+    Ist \(A \subset X\) und \(B \subset Y\),
+     dann ist das Bild von \(A\):
+    \[f(A) := \set{ f(x) \;\vert \; x \in A }\]
+    Auch ist \(Bild(f) := f(X)\). \\
+    Das Urbild von \(B\) ist : 
+    \[f^{-1}(B) := \set{x \;\vert \; f(x) \in B}\]
+\end{karte}
+\begin{karte}{Definition Injektivität}
+Die Abbildung \(f: X \rightarrow Y\) ist injektiv, wenn \\
+keine zwei Elemente von \(X\) auf dasselbe Element von \(Y\) abgebildet wird. 
+\end{karte}
+\begin{karte}{Definition Surjektivität}
+    Die Abbildung \(f: X \rightarrow Y\) ist surjektiv, wenn \\
+    \[ f(X) \; = \; Y\].
+\end{karte} 
+\begin{karte}{Definition Bijektivität}
+    Ist eine Abbildung injektiv und surjektiv, dann ist sie bijektiv. 
+\end{karte}
+\begin{karte}{Definition Identität}
+    Die Abbildung \(id_A : A \rightarrow A, id_A(a) = a\) ist die Identität.
+\end{karte}
+\begin{karte}{Defintion kanonische Abbildung}
+    Ist \(\sim\) eine Äquivalenzrelation auf \(X\). \\
+    Die surjektive Abbildung \(X \rightarrow X / \sim, \; x \mapsto [x]\), 
+    ist die kanonische Projektion oder Quotientenabbildung. 
+\end{karte}
+\begin{karte}{Definition Wohldefiniertheit}
+    Eine Abbildung \(f: X \rightarrow Y\) ist wohldefiniert, \\
+    wenn für eine Äquivalenzrelation 
+    \[\sim : X / \sim Y, [x] \mapsto f(x)\] 
+    gilt, dass aus \(x \sim x\prime \) stets \(f(x) = f(x \prime)\) folgt. 
+\end{karte}
+\begin{karte}{Definition Komposition}
+    Für \(f: X \rightarrow Y\) und \(g: Y \rightarrow Z\) ist 
+    die Komposition :
+    \[g \circ f : X \rightarrow Z,\; x \mapsto g(f(x))\]
+\end{karte}
+\begin{karte}{Definition Kommutatives Diagramm}
+    Wenn in einem Diagramm zu je zwei Mengen alle Abbildungen 
+    (auch Kompositionen), die die eine Menge in die andere abbilden,
+    übereinstimmen, dann nennt man das Diagramm kommutativ. 
+\end{karte}
+\begin{karte}{Definition Inverses}
+    Für eine bijektive Abbildung \(f: X \rightarrow Y\) ist
+    \[f^{-1}: Y \rightarrow X, f(x) \mapsto x\] 
+    die Umkehrabbildung oder Inverses.
+\end{karte}
+\begin{karte}{Definition Einschränkung}
+    Eine Einschränkung von \(f: X \rightarrow Y\) 
+    auf \(A \subset X\) ist : \\
+    \[f \vert_A : A \rightarrow Y, x \mapsto f(x)\]
+\end{karte}
+\subsection*{Körper}
+\begin{karte}{Definition Innere Verknüpfung}
+    Eine Abbildung \(f: M x M \rightarrow M\) 
+    ist eine innere Verknüpfung auf der Menge M.
+\end{karte}
+\begin{karte}{Defintion Gruppe}
+    Eine Gruppe \( (G,*) \) besteht aus einer Menge 
+    \(G\) und einer inneren Verknüpfung \(*\) auf \(G\).\\
+    Eine Gruppe hat folgende Eigenschaften: 
+    \begin{description}
+        \item[Sie ist assoziativ :] \(\forall \; a,b,c \in G : (a * b) * c = a * (b * c)\).
+        \item[Es gibt ein neutrales Element:] \(\forall a \in G : \exists e \in G : e*a = a*e = a\).
+        \item[Jedes Element hat ein Inverses:] Zu jedem \(a \in G : \exists b \in G : a * b = b * a = e\). 
+    \end{description}
+    Gilt insbesondere \(\forall a,b \in G : a * b = b * a \), so ist 
+    \((G,*)\) abelsch oder kommutativ. 
+\end{karte}
+\begin{karte}{Definition Körper}
+    Ein Körper \((K,+,\cdot)\) besteht aus einer Menge \(K\) und zwei 
+    inneren Verknüpfungen. \\
+    Ein Körper hat folgende Eigenschaften: 
+    \begin{description}
+        \item[Bzgl. Addition abelsch]\((K,+)\) ist abelsch.
+        \item[Bzgl. Multiplikation abelsch]\((K*,\cdot)\) ist abelsch mit \(K* = K \ \set{0}\).
+        \item[Distributiv]\(\forall a,b,c \in K : a \cdot (b + c) + a \cdot b + a \cdot c\).   
+    \end{description}
+\end{karte}
+\begin{karte}{Definition Teilkörper}
+    Für \(L \subset K\) und \(K,+,\cdot\) ist L ein Teilkörper, 
+    wenn sich die Addition \(+\) und die Multiplikation \(\cdot\) 
+    zu inneren Verknüpfungen auf \(L\) einschränken, sodass \(L\)
+    selbst zu einem Körper wird.
+\end{karte}
 \end{document}
