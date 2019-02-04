@@ -42,7 +42,26 @@
     \[A = v_0 + U := \set{v_0 + v \;\vert\; v \in U}\] 
     Ist \(U = \set{\lambda \cdot w \;\vert\; \lambda \in K}\) 
     mit \(w \in V \backslash \set{0}\) heißt \(A\) affine Gerade. \\
-    Ein affiner Untervektorraum \(A \subset V\) ist genau dann ein Untervektorraum,
-    wenn \(0 \in A\).
+    Ein affiner Untervektorraum \(A \subset V\) ist genau 
+    dann ein Untervektorraum, wenn \(0 \in A\).
+\end{karte}
+\subsection*{Lineare Unabhängigkeit und Basen}
+\begin{karte}{Definition Linearkombination}
+    Für eine endliche Indexmenge \(J\), eine Familie von Skalaren in 
+    \(K \;(\lambda_j)_{j \in J}\) und eine Familie von Vektoren in 
+    \(V \; (v_j)_{j \in J}\), ist \(v\) eine Linearkombination der 
+    Vektoren \(v_j, j \in J\) falls : 
+    \[v = \sum_{j \in J} \lambda_j v_j \]
+\end{karte}
+\begin{karte}{Definition Erzeugnis}
+    Das Erzeugnis von \(\langle S \rangle \) ist die Menge 
+    aller Linearkombinationen von Vektoren aus \(S \subset V\). \\
+    Man definiert \(\langle \emptyset \rangle : = \set{0}\). \\
+    Das Erzeugnis von \(S\) ist ein Untervektorraum von \(V\), 
+    der \(S\) enthält.
+\end{karte}
+\begin{karte}{Definition Erzeugendensystem}
+    \(S\) ist ein Erzeugendensystem von \(V\), wenn \(\langle S \rangle = V\)\\
+    Man sagt, dass \(S\) den Vektorraum \(V\) erzeugt.
 \end{karte}
 \end{document}
