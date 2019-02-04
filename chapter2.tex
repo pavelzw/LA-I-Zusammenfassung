@@ -11,6 +11,38 @@
     und der skalaren Multiplikation 
     \[ K \times V \rightarrow V, (\alpha, v) \mapsto 
     \alpha \cdot v. \]
+    so dass gilt: 
+    \begin{description}
+        \item[Abelsche Gruppe der Addition]
+        \( (K,+) \) ist eine abelsche Gruppe.  
+        \item[Distributivität von Addition und skalarer Multiplikation] \hfill \\ 
+        \( \forall \alpha, \beta \in K\) und \( v, w \in V\) gelten : \\
+        \( (\alpha + \beta) \cdot v =  \alpha \cdot v + \beta \cdot v\)
+        und 
+        \( \alpha \cdot ( v + w) = \alpha \cdot v + \alpha \cdot w\)
+        \item[Assoziativität der skalaren Multiplikation] \hfill \\
+        \( \forall \alpha, \beta \in K\) und \( v \in V\) gelten :
+        \((\alpha \beta) \cdot v = \alpha \cdot (\beta \cdot v)\)
+        \item[Existenz eines neutralen Elements]
+        \( \forall v \in V : \exists 1_K \cdot v = v\)
+    \end{description}
 \end{karte}
-
+\begin{karte}{Definition Untervektorraum}
+    Ein Untervektorraum \(U\) vom \(K\)-Vektorraum \(V\) ist eine nicht-leere
+    Teilmenge \(U \subset V\), für die gilt : 
+    \[\alpha \in K \text {und } u, v \in U \Rightarrow \alpha \cdot v \in U
+    \text{ und } u + v \in U\]
+    Ein \(K\)-Untervektorraum ist ein \(K\)-Vektorraum 
+    (bez. der eingeschränkten Addition und skalaren Multiplikation).
+\end{karte}
+\begin{karte}{Definition affiner Unterraum}
+    Ist \(A\) ein affiner Unterraum \(A \subset V\) eines Vektorraums \(V\),
+    so existieren ein Untervektorraum \(U \in V\) und ein Vektor \(v_0 \in V\) 
+    und es gilt: 
+    \[A = v_0 + U := \set{v_0 + v \;\vert\; v \in U}\] 
+    Ist \(U = \set{\lambda \cdot w \;\vert\; \lambda \in K}\) 
+    mit \(w \in V \backslash \set{0}\) heißt \(A\) affine Gerade. \\
+    Ein affiner Untervektorraum \(A \subset V\) ist genau dann ein Untervektorraum,
+    wenn \(0 \in A\).
+\end{karte}
 \end{document}
