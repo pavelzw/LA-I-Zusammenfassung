@@ -4,6 +4,7 @@
 \RequirePackage[utf8]{inputenc} %Umlaute
 \RequirePackage{graphicx} %Grafiken einbinden
 \RequirePackage{amsmath,amssymb,amsthm}
+\RequirePackage{subfiles}
 
 \theoremstyle{definition}
 \newtheorem{satz}{Satz}[subsection]
@@ -31,6 +32,10 @@
 \newcommand{\F}{\mathbb{F}}
 \newcommand{\PO}{\mathcal{P}}
 \newcommand{\1}{\mathds{1}}
+\newcommand{\minus}{\scalebox{0.75}[1.0]{\(-\)}}
+\newcommand{\shortminus}{\scalebox{0.5}[1.0]{\(-\)}}
+\newcommand{\inverse}[1]{{#1}^{\minus 1}}
+\newcommand{\existse}{\exists!}
 \renewcommand{\Im}{\operatorname{Im}}
 \renewcommand{\Re}{\operatorname{{Re}}}
 \newcommand{\overunderset}[3]{\overset{#1}{\underset{#2}{#3}}}

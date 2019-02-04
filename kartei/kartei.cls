@@ -16,7 +16,7 @@
 % Working on an english manual, should be available soon.
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{kartei}[2011/12/31 Karteikarten in LaTeX, Version 1.8b2]
+\ProvidesClass{kartei/kartei}[2011/12/31 Karteikarten in LaTeX, Version 1.8b2]
 \newcommand{\setcardpagelayout}{}
 
 \makeatletter
@@ -222,18 +222,18 @@
 \else%
 	\renewcommand{\setcardpagelayout}{} % no print
 \fi%
-\input{kartei.pageshipout}
+\input{kartei/kartei.pageshipout}
 
-\input{kartei.a5printstyle}
-\input{kartei.a5printstylerotation}
-\input{kartei.a6printstyle}
-\input{kartei.a6printstylerotation}
-\input{kartei.a7printstyle}
-\input{kartei.a7printstylerotation}
-\input{kartei.a8printstyle}
-\input{kartei.a8printstylerotation}
-\input{kartei.a9printstyle}
-\input{kartei.a9printstylerotation}
+\input{kartei/kartei.a5printstyle}
+\input{kartei/kartei.a5printstylerotation}
+\input{kartei/kartei.a6printstyle}
+\input{kartei/kartei.a6printstylerotation}
+\input{kartei/kartei.a7printstyle}
+\input{kartei/kartei.a7printstylerotation}
+\input{kartei/kartei.a8printstyle}
+\input{kartei/kartei.a8printstylerotation}
+\input{kartei/kartei.a9printstyle}
+\input{kartei/kartei.a9printstylerotation}
 
 %
 % -----------------
