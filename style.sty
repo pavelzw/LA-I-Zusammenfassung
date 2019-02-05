@@ -22,6 +22,10 @@
 \newtheorem{bsp}[bem]{Beispiel}
 \newtheorem{bspe}[bem]{Beispiele}
 
+\let\oldforall\forall
+\renewcommand{\forall}{\oldforall \,}
+\let\oldexists\exists
+\renewcommand{\exists}{\oldexists \,}
 \newcommand{\gqq}[1]{\glqq{}#1\grqq{}}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
@@ -35,12 +39,13 @@
 \newcommand{\minus}{\scalebox{0.75}[1.0]{\(-\)}}
 \newcommand{\shortminus}{\scalebox{0.5}[1.0]{\(-\)}}
 \newcommand{\inverse}[1]{{#1}^{\minus 1}}
-\newcommand{\existse}{\exists!}
+\newcommand{\existse}{\oldexists! \,}
 \renewcommand{\Im}{\operatorname{Im}}
 \renewcommand{\Re}{\operatorname{{Re}}}
 \newcommand{\overunderset}[3]{\overset{#1}{\underset{#2}{#3}}}
 \newcommand{\oversett}[2]{\overset{\text{#1}}{#2}}
 \newcommand{\undersett}[2]{\underset{\text{#1}}{#2}}
+\newcommand{\abs}[1]{\left| #1 \right|}
 \newcommand{\set}[1]{\{#1\}}
 \DeclareMathOperator{\injektiv}{injektiv}
 \DeclareMathOperator{\surjektiv}{surjektiv}
