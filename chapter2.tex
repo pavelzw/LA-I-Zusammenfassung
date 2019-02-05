@@ -11,6 +11,116 @@
     und der skalaren Multiplikation 
     \[ K \times V \rightarrow V, (\alpha, v) \mapsto 
     \alpha \cdot v. \]
+    so dass gilt: 
+    \begin{description}
+        \item[Abelsche Gruppe der Addition]
+        \( (K,+) \) ist eine abelsche Gruppe.  
+        \item[Distributivität von Addition und skalarer Multiplikation] \hfill \\ 
+        \( \forall \alpha, \beta \in K\) und \( v, w \in V\) gelten : \\
+        \( (\alpha + \beta) \cdot v =  \alpha \cdot v + \beta \cdot v\)
+        und 
+        \( \alpha \cdot ( v + w) = \alpha \cdot v + \alpha \cdot w\)
+        \item[Assoziativität der skalaren Multiplikation] \hfill \\
+        \( \forall \alpha, \beta \in K\) und \( v \in V\) gelten :
+        \((\alpha \beta) \cdot v = \alpha \cdot (\beta \cdot v)\)
+        \item[Existenz eines neutralen Elements]
+        \( \forall v \in V : \exists 1_K \cdot v = v\)
+    \end{description}
 \end{karte}
-
+\begin{karte}{Definition Untervektorraum}
+    Ein Untervektorraum \(U\) vom \(K\)-Vektorraum \(V\) ist eine nicht-leere
+    Teilmenge \(U \subset V\), für die gilt : 
+    \[\alpha \in K \text {und } u, v \in U \Rightarrow \alpha \cdot v \in U
+    \text{ und } u + v \in U\]
+    Ein \(K\)-Untervektorraum ist ein \(K\)-Vektorraum 
+    (bez. der eingeschränkten Addition und skalaren Multiplikation).
+\end{karte}
+\begin{karte}{Definition affiner Unterraum}
+    Ist \(A\) ein affiner Unterraum \(A \subset V\) eines Vektorraums \(V\),
+    so existieren ein Untervektorraum \(U \in V\) und ein Vektor \(v_0 \in V\) 
+    und es gilt: 
+    \[A = v_0 + U := \set{v_0 + v \;\vert\; v \in U}\] 
+    Ist \(U = \set{\lambda \cdot w \;\vert\; \lambda \in K}\) 
+    mit \(w \in V \backslash \set{0}\) heißt \(A\) affine Gerade. \\
+    Ein affiner Untervektorraum \(A \subset V\) ist genau 
+    dann ein Untervektorraum, wenn \(0 \in A\).
+\end{karte}
+\subsection*{Lineare Unabhängigkeit und Basen}
+\begin{karte}{Definition Linearkombination}
+    Für eine endliche Indexmenge \(J\), eine Familie von Skalaren in 
+    \(K \;(\lambda_j)_{j \in J}\) und eine Familie von Vektoren in 
+    \(V \; (v_j)_{j \in J}\), ist \(v\) eine Linearkombination der 
+    Vektoren \(v_j, j \in J\) falls : 
+    \[v = \sum_{j \in J} \lambda_j v_j \]
+\end{karte}
+\begin{karte}{Definition Erzeugnis}
+    Das Erzeugnis von \(\langle S \rangle \) ist die Menge 
+    aller Linearkombinationen von Vektoren aus \(S \subset V\). \\
+    Man definiert \(\langle \emptyset \rangle : = \set{0}\). \\
+    Das Erzeugnis von \(S\) ist ein Untervektorraum von \(V\), 
+    der \(S\) enthält.
+\end{karte}
+\begin{karte}{Definition Erzeugendensystem}
+    \(S\) ist ein Erzeugendensystem von \(V\), wenn \(\langle S \rangle = V\)\\
+    Man sagt, dass \(S\) den Vektorraum \(V\) erzeugt.
+\end{karte}
+\begin{karte}{Definition Lineare Unabhängigkeit}
+    Eine Teilmenge \(S \subset V\) ist genau dann linear unabhängig,
+    wenn für jede endliche Teilmenge \(E \subset) S\) 
+    und jede Familie von Skalaren \( (\lambda_v)_{v \in E}\) gilt : 
+    \[0 = \sum_{v \in E} \lambda_v v \Rightarrow \lambda_v = 0 
+    \text{ für jedes } v \in E\]
+    Gilt dies nicht, dann ist \(S\) linear abhängig.
+\end{karte}
+\begin{karte}{Definition Basis}
+    Eine Basis ist eine linear unabhängige Teilmenge von \(V\) und 
+    \(V\) erzeugt. \\
+    Eine Menge \(\set{v_1, ... ,v_n}\) von \(n\) paarweise verschiedenen 
+    Vektoren in \(V\) ist genau dann eine Basis, wenn es für jeden \(v \in V\)
+    eindeutig bestimmten Skalaren \(\lambda_1, ... , \lambda_n \in K\)
+    so, dass : 
+    \[v = \lambda_1 v_1 + ... + \lambda_n v_n\]
+\end{karte}
+\begin{karte}{Definition Kanonische Basis}
+    \(e_i \in K\), \(i \in \set{1, ... , n}\) ist der \(i\)-te Basisvektor
+    der kanonischen Basis \(\set{e_1, ... ,e_n}\) für den gilt, dass die 
+    \(i\)-te Komponente 1 ist und alle andere Komponenten \(0\) sind.
+\end{karte}
+\begin{karte}{Erweiterungslemma}
+    Sei \(T \subset V\) linear unabhängig und \(v \in V \backslash T \). Dann gilt : 
+    \[T \cup \set{v} \text{ linear unabhängig } 
+    \Leftrightarrow v \notin \langle T \rangle \]
+\end{karte}
+\subsection*{Dimensionen}
+\begin{karte}{Basisergänzungssatz}
+    Sei \(S \subset V\) ein Erzeugendensystem und \(T \subset V\)
+    linear unabhängig. \\
+    Dann kann man \(T\) durch Hinzunahme geeigneter Vektoren aus \(S\)
+    zu einer Basis ergänzen.
+    Jeder Vektorraum besitzt eine Basis. 
+\end{karte}
+\begin{karte}{Lemma von Zorn}
+    Ist \(\mathcal{M}\) eine teilweise geordnete Menge und besitzt
+    jede streng geordnete Teilmenge von \(\mathcal{M}\) eine obere 
+    Schranke in \(\mathcal{M}\), so besitzt \(\mathcal{M}\) 
+    ein maximales Element.
+\end{karte}
+\begin{karte}{Austauschlemma}
+    Seien \(B, B'\) zwei Basen eines Vektorraums \(V\). \\ 
+    Für jedes \(v \in B \) gibt es ein \(w \in B'\) so, 
+    dass \((B \backslash \set{v}) \cup \set{w}\) 
+    eine Basis von \(V\) ist.
+\end{karte}
+\begin{karte}{Basisäquivalenzsatz}
+    Für \(B \subset V\) sind äquivalent: 
+    \begin{description}
+        \item[] \(B\) ist eine Basis von \(V\).
+        \item[] \(B\) ist eine maximal linear unabhängige Menge.
+        \item[] \(B\) ist ein minimales Erzeugendensystem.
+    \end{description}
+\end{karte}
+\begin{karte}{Definition Dimension}
+    Die Mächtigkeit einer Basis von \(V\) heißt Dimension von \(V\). \\ 
+    Je zwei Basen eines Vektorraums \(V\) haben die gleiche Dimension.
+\end{karte}
 \end{document}
