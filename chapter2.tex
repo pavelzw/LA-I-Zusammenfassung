@@ -64,4 +64,31 @@
     \(S\) ist ein Erzeugendensystem von \(V\), wenn \(\langle S \rangle = V\)\\
     Man sagt, dass \(S\) den Vektorraum \(V\) erzeugt.
 \end{karte}
+\begin{karte}{Definition Lineare Unabhängigkeit}
+    Eine Teilmenge \(S \subset V\) ist genau dann linear unabhängig,
+    wenn für jede endliche Teilmenge \(E \subset) S\) 
+    und jede Familie von Skalaren \( (\lambda_v)_{v \in E}\) gilt : 
+    \[0 = \sum_{v \in E} \lambda_v v \Rightarrow \lambda_v = 0 
+    \text{ für jedes } v \in E\]
+\end{karte}
+\begin{karte}{Definition Basis}
+    Eine Basis ist eine linear unabhängige Teilmenge von \(V\) und 
+    \(V\) erzeugt. \\
+    Eine Menge \(\set{v_1, ... ,v_n}\) von \(n\) paarweise verschiedenen 
+    Vektoren in \(V\) ist genau dann eine Basis, wenn es für jeden \(v \in V\)
+    eindeutig bestimmten Skalaren \(\lambda_1, ... , \lambda_n \in K\)
+    so, dass : 
+    \[v = \lambda_1 v_1 + ... + \lambda_n v_n\]
+\end{karte}
+\begin{karte}{Definition Kanonische Basis}
+    \(e_i \in K\), \(i \in \set{1, ... , n}\) ist der \(i\)-te Basisvektor
+    der kanonischen Basis \(\set{e_1, ... ,e_n}\) für den gilt, dass die 
+    \(i\)-te Komponente 1 ist und alle andere Komponenten \(0\) sind.
+\end{karte}
+\begin{karte}{3.26 Erweiterungslemma}
+    Sei \(T \subset V\) linear unabhängig und \(v \in V \backslash T \). Dann gilt : 
+    \[T \cup \set{v} \text{ linear unabhängig } 
+    \Leftrightarrow v \notin \langle T \rangle \]
+
+\end{karte}
 \end{document}
