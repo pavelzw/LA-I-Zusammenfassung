@@ -62,7 +62,7 @@
     der \(S\) enthält.
 \end{karte}
 \begin{karte}{Definition Erzeugendensystem}
-    \(S\) ist ein Erzeugendensystem von \(V\), wenn \(\langle S \rangle = V\)\\
+    \(S\) ist ein Erzeugendensystem von \(V\), wenn \(\langle S \rangle = V\) \\
     Man sagt, dass \(S\) den Vektorraum \(V\) erzeugt.
 \end{karte}
 \begin{karte}{Definition Lineare Unabhängigkeit}
@@ -137,7 +137,7 @@
 \subsection*{Konstruktion von Vektorräumen}
 \begin{karte}{Summe von Vektorräumen}
     Für \(U_1, U_2 \subset V\) Untervektorräume ist 
-    \[U_1 + U_2 := \set{x + y \;\vert\; x \in U_1, y \in U_2}\]
+    \[U_1 + U_2 := \set{x + y \;\vert \; x \in U_1, y \in U_2}\]
     die Summe von \(U_1\) und \(U_2\).
 \end{karte}
 \begin{karte}{Definition Direkte Summe von Vektorräumen}
@@ -154,6 +154,38 @@
 \begin{karte}{Definition Komplement}
     Seien \(U,W \subset V\) Untervektorräume.\\
     Gilt \(V = U \oplus W\), so ist W das Komplement von \(U\). \\
-    Jeder Untervektorraum besitzt ein Komplement.
+    Jeder Untervektorraum besitzt ein Komplement.\\
+    Ist \( V = U \oplus W \), so gilt \( \dim V = \dim U + \dim W \).
+\end{karte}
+\begin{karte}{Definition Äußere Direkte Summe}
+    Die \textit{äußere direkte Summe} der \(K\)-Vektorräume \(V\) 
+    und \(W\) ist der\\
+    \(K\)-Vektorraum gegeben durch \( V \times W \) 
+    mit der Addition und der skalaren Multiplikation 
+    \[ (x,y) + (x',y') := (x + x', y + y'), \quad 
+    \alpha \cdot (x,y) := (\alpha \cdot x, \alpha \cdot y) \]
+    für \( x,x' \in V, y,y' \in W \) und \( \alpha \in K \). 
+    Man notiert sie mit \( v \oplus W \).
+\end{karte}
+\begin{karte}{Satz der Untervektorraumdimension}
+    Sei \( U \subset V \) ein Untervektorraum und \( \dim V < \infty \). \\
+    Wenn \( \dim U = \dim V \), so ist \( U = V \).
+\end{karte}
+\begin{karte}{Dimensionsformel für Untervektorräume}
+    Seien \( U_1, U_2 \) Untervektorräume von \(V\). Dann gilt 
+    \[ \dim(U_1 + U_2) = \dim U_1 + \dim U_2 - \dim(U_1 \cap U_2). \]
+\end{karte}
+\begin{karte}{Quotientenvektorraum}
+    \( V / U \) sei die Quotientenmenge \( V /_{\sim U} \). Dann sind durch 
+    \begin{align*}
+        [x] + [y] := [x + y]\\
+        \lambda [x] := [\lambda x]
+    \end{align*}
+    für alle \( x,y\in V, \lambda \in K \) eine Addition und skalare Multiplikation 
+    für \( V/U \) definiert.
+\end{karte}
+\begin{karte}{Dimensionsformel für Quotientenvektorräume}
+    Sei \( U \subset V \) ein Untervektorraum. Dann gilt 
+    \[ \dim U + \dim(V/U) = \dim V. \]
 \end{karte}
 \end{document}
