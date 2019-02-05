@@ -70,6 +70,7 @@
     und jede Familie von Skalaren \( (\lambda_v)_{v \in E}\) gilt : 
     \[0 = \sum_{v \in E} \lambda_v v \Rightarrow \lambda_v = 0 
     \text{ für jedes } v \in E\]
+    Gilt dies nicht, dann ist \(S\) linear abhängig.
 \end{karte}
 \begin{karte}{Definition Basis}
     Eine Basis ist eine linear unabhängige Teilmenge von \(V\) und 
@@ -85,10 +86,41 @@
     der kanonischen Basis \(\set{e_1, ... ,e_n}\) für den gilt, dass die 
     \(i\)-te Komponente 1 ist und alle andere Komponenten \(0\) sind.
 \end{karte}
-\begin{karte}{3.26 Erweiterungslemma}
+\begin{karte}{Erweiterungslemma}
     Sei \(T \subset V\) linear unabhängig und \(v \in V \backslash T \). Dann gilt : 
     \[T \cup \set{v} \text{ linear unabhängig } 
     \Leftrightarrow v \notin \langle T \rangle \]
-
+\end{karte}
+\subsection*{Dimensionen}
+\begin{karte}{Basisergänzungssatz}
+    Sei \(S \subset V\) ein Erzeugendensystem und \(T \subset V\)
+    linear unabhängig. \\
+    Dann kann man \(T\) durch Hinzunahme geeigneter Vektoren aus \(S\)
+    zu einer Basis ergänzen.
+    Jeder Vektorraum besitzt eine Basis. 
+\end{karte}
+\begin{karte}{Lemma von Zorn}
+    Ist \(\mathcal{M}\) eine teilweise geordnete Menge und besitzt
+    jede streng geordnete Teilmenge von \(\mathcal{M}\) eine obere 
+    Schranke in \(\mathcal{M}\), so besitzt \(\mathcal{M}\) 
+    ein maximales Element.
+\end{karte}
+\begin{karte}{Austauschlemma}
+    Seien \(B, B'\) zwei Basen eines Vektorraums \(V\). \\ 
+    Für jedes \(v \in B \) gibt es ein \(w \in B'\) so, 
+    dass \((B \backslash \set{v}) \cup \set{w}\) 
+    eine Basis von \(V\) ist.
+\end{karte}
+\begin{karte}{Basisäquivalenzsatz}
+    Für \(B \subset V\) sind äquivalent: 
+    \begin{description}
+        \item[] \(B\) ist eine Basis von \(V\).
+        \item[] \(B\) ist eine maximal linear unabhängige Menge.
+        \item[] \(B\) ist ein minimales Erzeugendensystem.
+    \end{description}
+\end{karte}
+\begin{karte}{Definition Dimension}
+    Die Mächtigkeit einer Basis von \(V\) heißt Dimension von \(V\). \\ 
+    Je zwei Basen eines Vektorraums \(V\) haben die gleiche Dimension.
 \end{karte}
 \end{document}
