@@ -163,6 +163,18 @@
     a * b = b * a \), so ist \( (G,*) \) abelsch 
     oder kommutativ. 
 \end{karte}
+\begin{karte}{Beispiele Gruppen}
+    \begin{itemize}
+        \item \( (\Q, +) \)
+        \item \( (\Z, +) \)
+        \item \( (\N_0, +) \) ist keine Gruppe, da keine 
+        Inversen existieren.
+        \item \( (\set{ x\in\R \;\vert \; x > 0 }, \cdot) \)
+        \item \( (\set{2x \;\vert \; x \in \Z}, +) \)
+        \item \( ( \set{ f: \set{1,\ldots,n} \rightarrow 
+        \set{1,\ldots,n} \;\vert \; f \bijektiv }, \circ ) \)
+    \end{itemize}
+\end{karte}
 \begin{karte}{Definition Körper}
     Ein Körper \( (K,+,\cdot) \) besteht aus einer Menge 
     \(K\) und \\ 
@@ -178,6 +190,16 @@
         a \cdot (b + c) = a \cdot b + a \cdot c\).
     \end{description}
 \end{karte}
+\begin{karte}{Beispiele Körper}
+    \begin{itemize}
+        \item \( (\Q, +, \cdot) \)
+        \item \( (\R, +, \cdot) \)
+        \item \( (\Z, +, \cdot) \) ist kein Körper, da keine 
+        multiplikativ Inversen existieren.
+        \item \( (\C, +, \cdot) \)
+        \item \( (\F_p, +, \cdot) \), \(p\) Primzahl
+    \end{itemize}
+\end{karte}
 \begin{karte}{Null- und Einselement im Körper}
     Das neutrale Element der Addition wird Nullelement genannt und 
     das neutrale Element der Multiplikation wird Einselement genannt.
@@ -190,6 +212,21 @@
     Körper wird.
 \end{karte}
 \begin{karte}{Der Körper der komplexen Zahlen}
-    
+    \[ \C = \set{ z \;\vert \; z = x + i \cdot y, \; x, 
+    y \in \R, i^2 = -1 } \]
+    \( x \) ist der Realteil einer komplexen Zahl \(z\) und 
+    \( y \) ist der Imaginärteil der komplexen Zahl.\\
+    Für die Addition gilt:
+    \[ (u,v) + (x,y) := (u + x, v + y). \]
+    Für die Multiplikation gilt: 
+    \[ (u,v) \cdot (x,y) := (ux-vy, ux+vy). \]
+    Für das multiplikativ Inverse gilt:
+    \[ \inverse{(x,y)} = \left( \frac{x}{x^2 + y^2}, 
+    -\frac{y}{ x^2 + y^2 } \right) \]
+\end{karte}
+\begin{karte}{Definition Norm und komplexe Konjugation}
+    Das Norm einer Zahl \( z=x+iy \in \C \) lautet 
+    \( \abs{z} = \sqrt{x^2+y^2} \) und das komplex 
+    Konjugierte von \(z\) lautet \( \bar{z} = x - iy \).
 \end{karte}
 \end{document}
