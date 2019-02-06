@@ -59,5 +59,202 @@
     Eine \textit{geordnete Basis} von \(V\) ist ein Tupel \( (v_1,\ldots,v_n) \) 
     an linear unabhängigen Vektoren, die \(V\) erzeugen.
 \end{karte}
+\subsection*{Basen, Dimension und lineare Abbildungen}
+\begin{karte}{Satz der linearen Abbildung} %besserer Name?
+    Seien \(V\) und \(W\) Vektorräume und \( (v_1,\ldots,v_n) \) 
+    eine geordnete Basis von \(V\). Dann gibt es zu jedem 
+    \(n\)-Tupel \((w_1,\ldots,w_n)\) von Vektoren in \(W\) 
+    genau eine lineare Abbildung \( f: V \rightarrow W \) mit 
+    \( f(v_i) = w_i \) für alle \( i \in \set{1,\ldots,n} \).
+\end{karte}
+\begin{karte}{Satz des Bilds der linearen Abbildung}%besserer Name?
+    Seien \(V\) und \(W\) \(K\)-Vektorräume und 
+    \((v_1,\ldots,v_n)\) eine Basis von \(V\). Sei 
+    \( f : V \rightarrow W \) eine lineare Abbildung. Dann gilt 
+    \begin{itemize}
+        \item \( f \surjektiv \Leftrightarrow 
+        (f(v_1),\ldots,f(v_n)) \) Erzeugendensystem.
+        \item \( f \injektiv \Leftrightarrow 
+        (f(v_1),\ldots,f(v_n)) \) linear unabhängig.
+        \item \( f \bijektiv \Leftrightarrow
+        (f(v_1),\ldots,f(v_n)) \) Basis.
+    \end{itemize}
+\end{karte}
+\begin{karte}{Isomorphiesatz}
+    Je zwei \(K\)-Vektorräume der gleichen Dimension 
+    \( n \in \N_0 \) sind isomorph.\\
+    Isomorphe Vektorräume haben die gleiche Dimension.
+\end{karte}
+\begin{karte}{Universelle Eigenschaft des Quotienten}
+    Sei \( U \subset V \) ein Untervektorraum und 
+    \( p : V \rightarrow V/U \) die kanonische Projektion. 
+    Sei \( f: V \rightarrow W \) eine lineare Abbildung 
+    \( \bar{f} : V/U \rightarrow W \), für die gilt:
+    \[ f = \bar{f} \circ p. \]
+    Wir haben zueinander inverse Isomorphismen:
+    %TODO TIKZ ODER SO
+\end{karte}
+\begin{karte}{Homomorphiesatz}
+    Eine lineare Abbildung \(f: V \rightarrow W\) 
+    induziert einen Isomorphismus
+    \[ V/\ker(f) \xrightarrow{\overset{\sim}{=}} f(V). \]
+\end{karte}
+\begin{karte}{Definition Rang einer linearen Abbildung}
+    Sei \(f : V \Rightarrow W\) eine lineare Abbildung. 
+    \(\rk(f) := \dim \Bild(f) \) ist der Rang von \(f\).
+\end{karte}
+\begin{karte}{Dimensionsformel einer linearen Abbildung}
+    Für eine lineare Abbildung \( f: V \rightarrow W \) 
+    gilt 
+    \[ \dim V = \rk f + \dim(\ker f). \]
+    Eine lineare Abbildung zwischen Vektorräumen 
+    der gleichen Dimension ist genau dann surjektiv, wenn sie 
+    injektiv ist.    
+\end{karte}
+\subsection*{Matrizen}
+\begin{karte}{Definition Matrix}
+    Eine \textit{\(m \times n\)-Matrix} über \(K\) ist 
+    eine über \( \set{1,\ldots,m} \times \set{1,\ldots,n} \) 
+    indizierte Familie in \(K\), die wir nach folgendem Schema 
+    anordnen:
+    \[ \begin{pmatrix}
+        a_{11} & \cdots & a_{1n}\\
+        \vdots & \ddots & \vdots \\
+        a_{m1} & \cdots & a_{mn}
+    \end{pmatrix}. \]
+    Die \( a_{ij} \in K \) nennt man auch 
+    \textit{Koeffizienten} der Matrix. Man notiert die obige 
+    Matrix auch als \( (a_{ij}) \). \\
+    Die Menge aller \( m \times n \)-Matrizen über \(K\) wird 
+    mit \( M_{m,n}(K) \) (oder mit \(M_n(K)\) für \(n=m\)) 
+    bezeichnet. Wir identifizieren \( M_{m,1} \) mit \(K^m\) 
+    und \( M_{1,1} \) mit \(K\).
+\end{karte}
+\begin{karte}{Definition Zeilen und Spalten einer Matrix}
+    Sei \(k \in \set{1, \ldots, m}\) und \(l \in \set{1, \ldots , n}\).
+    Weiter sei \(A = (a_{ij}) \in M_{m,n}(K)\). 
+    Die \(k\)-te Zeile von \(A\) ist: 
+    \[A_{k*} := (a_{k1},  \ldots, a_{kn}) \in M_{1,n}(K)\]
+    Die \(l\)-te Spalte von \(A\) ist:
+    \[A_{*l} := (a_{1l}, \ldots , a_{ml}) \in M_{m,1}(K)\]                        
+\end{karte}
+\begin{karte}{Definition Matrixmultiplikation}
+    \begin{itemize}
+        \item Für \(A = (a_{1i}) \in M_{1,n}(K)\) und 
+        \(B = (b_{i1}) \in M_{n,1}\) definiere: g
+        \[A \cdot B := \sum_{i=1}^n a_{1i}b_{i1} \in K\]
+        \item Für \(A \in M_{n,p}(K)\) und \(B \in M_{p,q}(K)\) definiere
+        \[A \cdot B = {(A_{i*} \cdot B_{*k})}_{\substack{i=1,\ldots,n \\ k=1,\ldots,q}} 
+        \in M_{n,q}(K) \]
+    \end{itemize}
+\end{karte}
 
+\begin{karte}{Einheitsmatrix}
+    Sei \( I_n \in M_n(K) \) die Matrix, deren \(i\)-te Spalte 
+    der \(i\)-te Vektor der kanonischen Basis ist, d.\ h.\ 
+    \[ I_n = 
+    \begin{pmatrix}
+        1 & 0 & 0 & \cdots & 0 \\
+        0 & 1 & 0 & \cdots & 0 \\
+        0 & 0 & 1 & \cdots & 0 \\
+        \vdots & \vdots & \vdots & \ddots & \vdots \\
+        0 & 0 & 0 & \cdots & 1 \\
+    \end{pmatrix} \]
+    \(I_n\) heißt \textit{\( n \times n \)-Einheitsmatrix}. 
+    Mithilfe des Kronecker-Deltas 
+    \[ \delta_{j,k} = \begin{cases}
+        1 & \text{falls } j = k\\
+        0 & \text{sonst}
+    \end{cases} \]
+    können wir \(I_n\) auch als \( (\delta_{j,k}) \) schreiben.
+\end{karte}
+\begin{karte}{Definition Punktweise Addition und skalare Multiplikation von Matrizen}
+    Sind \(A = (a_{ij})\),\(B = (b_{ij}) \in M_{m,n}(K) \) 
+    und \(\lambda \in K\), so definiert man: 
+    \[A + B := (a_{ij} + b_{ij}) \in M_{m,n}(K) \]
+    \[ \lambda \cdot A := (\lambda a_{ij}) \in M_{m,n}(K) \]
+    Insbesondere \({(A + B)}_{*I} = A_{*i} + B_{*i}\) als Vektoren in 
+    \(K^m = M_{m,1}\).
+    Dann ist \(M_{m,n}(K)\) ein \(K\)-Vektorraum der Dimension \(mn\) 
+    mit den oberen inneren verknüpfungen.    
+\end{karte}
+\begin{karte}{Isomorphismus Matrix und lineare Abbildung}
+    Die Abbildung 
+    \[ L : M_{m,n}(K) \rightarrow \hom_K(K^n,K^m), 
+    L(A)(x) := A x \]
+    ist ein Isomorphismus von \(K\)-Vektorräumen.\\
+    Insbesondere gilt \( \dim(\hom_K(K^n,K^m)) = mn \).
+\end{karte}
+\begin{karte}{Satz zum Verhältnis Komposition und Matrixmultiplikation}
+    Für \(m,n,p \in \N \) kommutiert das folgende Diagramm, d.h. 
+    Matrixmultiplikation und Komposition linearer Abbildungen 
+    entsprechen sich: 
+%TODO insert diagram
+\end{karte}
+\begin{karte}{Rechenregeln Matrixmultiplikation}
+    Seien \( m,n,p,q \in \N \).
+    \begin{itemize}
+        \item \( A \cdot I_n = A \) und \( I_m \cdot A = A \) 
+        für jedes \( A \in M_{m,n}(K) \).
+        \item Für alle \( A, A' \in M_{m,n}(K) \) und alle 
+        \( B,B' \in M_{n,p}(K) \) gelten 
+        \[ (A+A')\cdot B = A\cdot B + A' \cdot B \text{ und } 
+        A \cdot (B + B') = A \cdot B + A \cdot B'. \]
+        \item Für alle \( A \in M_{m,n}(K), B \in M_{n,p}(K), 
+        C \in M_{p,q}(K) \) gilt 
+        \[ A \cdot (B \cdot C) = (A \cdot B) \cdot C. \]
+        \item Für alle \( \lambda \in K, A \in M_{m,n}(K) \) 
+        und \( B \in M_{n,p}(K) \) gilt 
+        \[ \lambda \cdot (A \cdot B) 
+        = (\lambda \cdot A) \cdot B
+        = A \cdot (\lambda \cdot B). \]
+    \end{itemize}
+\end{karte}
+\subsection*{Dualräume} 
+
+\begin{karte}{Definition Dualraum}
+    Der \textit{Dualraum} eines \(K\)-Vektorraums \(V\) ist der 
+    \(K\)-Vektorraum 
+    \[ V^* := \hom_K(V,K). \]
+    Die Elemente von \(V*\) heißen auch \textit{\(K\)-Linearformen}.
+\end{karte}
+\begin{karte}{Definition Duale Abbildung}
+    Sei \( f : V \rightarrow W \) eine lineare Abbildung.\\
+    Dann ist die zu f \textit{duale Abbildung}
+    \[ f^* : W^* rightarrow V^*, \phi \mapsto \phi \circ f \]
+    ebenfalls linear.
+    Ist \(g: W \rightarrow U\) eine weitere lineare Abbildung,
+    so ist \({(g \circ f)}^* = f^* \circ g^* \).    
+\end{karte}
+\begin{karte}{Definition duale Basis}
+    Sei \( (v_1, \ldots, v_n) \) eine Basis eines 
+    \(n\)-dimensionalen Vektorraums \(V\). Dann ist 
+    die lineare Abbildung 
+    \[ f : V^* \rightarrow K^n, 
+    \phi \mapsto (\phi(v_1), \ldots, \phi(v_n)) \]
+    ein Isomorphismus. Sei \( v_i^* := \inverse{f}(e_i) \). 
+    Man nennt \( (v_1^*, \ldots, v_n^*) \) die zu 
+    \( (v_1, \ldots, v_n) \) \textit{duale Basis}.\\
+    Insbesondere gilt \( \dim V^* = \dim V \).
+\end{karte}
+\begin{karte}{Definition kanonische duale Abbildung}
+    Die \textit{kanonische Abbildung} \( V \rightarrow V^{**} \),
+    die einen Vektor \(v\) auf die Auswertung bei \(v\), also auf die 
+    Linearform \( V^* \rightarrow K, \phi \mapsto \phi(v)\), abbildet,
+    ist injektiv und, falls \(\dim(V) < \infty \), ein Isomorphismus.
+\end{karte}
+\begin{karte}{Satz vom kanonischen Kernisomorphismus}%besserer Name? 
+    Sei \( f: V \rightarrow W \) linear. Es gibt einen kanonischen 
+    Isomorphismus 
+    \[ \ker(f^*) \overset{\sim}{=} {(W/\Bild(f))}^*. \]
+\end{karte}
+\begin{karte}{Äquivalenzsatz der dualen Abbildung}
+    Für eine lineare Abbildung \( f: V \rightarrow W \) 
+    zwischen endlich-dimensionalen Vektorräumen gelten:
+    \begin{itemize}
+        \item \( f \injektiv \Leftrightarrow f^* \surjektiv \).
+        \item \( f \surjektiv \Leftrightarrow f^* \injektiv \).
+        \item \( \rk f = \rk f^* \).
+    \end{itemize}
+\end{karte}
 \end{document}
