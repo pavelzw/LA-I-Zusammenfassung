@@ -1,0 +1,63 @@
+\documentclass[main.tex]{subfiles}
+\begin{document}
+
+\section*{Lineare Abbildungen}
+\subsection*{Der Begriff der linearen Abbildung}
+
+\begin{karte}{Definition Homomorphismus}
+    Eine Abbildung \( f: V \rightarrow W \) zwischen 
+    \(K\)-Vektorräumen heißt \textit{\(K\)-linear} oder 
+    \textit{Homomorphismus}, wenn 
+    \[ f(x+y) = f(x) + f(y) \text{ und } f(\lambda x) = \lambda f(x) \]
+    für alle \( x,y\in V \) und \( \lambda \in K \) gilt.\\
+    Die Menge aller Homomorphismen von \(V\) nach \(W\) wird mit 
+    \( \hom_K(V,W) \) bezeichnet.\\
+    Die Teilmenge \( \hom_K(V,W) \subset \mathrm{Abb}(V,W) \) ist ein 
+    \(K\)-Untervektorraum.
+\end{karte}
+\begin{karte}{Definition Biliniarität}
+    Es seien \( U,V,W \) \(K\)-Vektorräume. Eine Abbildung 
+    \( f: U \times V \rightarrow W \) ist \textit{\(K\)-bilinear}, 
+    wenn für jedes \( u_0 \in U \) und jedes \( v_0 \in V \) die 
+    folgenden Abbildungen linear sind:
+    \begin{align*}
+        V \rightarrow W, \,&v\mapsto f(u_0, v)\\
+        U \rightarrow W, \,&u\mapsto f(u,v_0).
+    \end{align*}
+\end{karte}
+\begin{karte}{Kompositionssatz}
+    Die Komposition zweier linearer Abbildungen ist linear.\\
+    Die Komposition ist als Abbildung 
+    \[ \hom_K(V,W) \times \hom_K(U,V) \rightarrow 
+    \hom_K(U,W),\; (f,g) \mapsto f\circ g \]
+    bilinear.
+\end{karte}
+\begin{karte}{Satz der linearen Umkehrabbildung}
+    Ist \( f: V \rightarrow W \) linear und bijektiv, so ist 
+    auch \( \inverse{f} \) linear.
+\end{karte}
+\begin{karte}{Definition Endomorphismus, Isomorphismus, Automorphismus}
+    \begin{itemize}
+        \item Ein \textit{Endomorphismus} ist eine lineare Abbildung von \(V\) 
+        nach \(V\).
+        \item Ein \textit{Isomorphismus} ist eine bijektive lineare Abbildung.
+        \item Ein \textit{Automorphismus} ist ein Isomorphismus und ein Endomorphismus.
+    \end{itemize}
+\end{karte}
+\begin{karte}{Definition Bild}
+    Sei \( f: V \rightarrow W \) eine lineare Abbildung.\\
+    Für das Bild von \(f\) gilt:
+    \[ \Bild(f) := f(V). \]
+    Das Bild von \(f\) ist ein Untervektorraum.
+\end{karte}
+\begin{karte}{Definition Kern}
+    Der \textit{Kern} ist wie folgt definiert:
+    \[ \ker(f) := \inverse{f}(\set{0}). \]
+    Der Kern von \(f\) ist ein Untervektorraum.
+\end{karte}
+\begin{karte}{Geordnete Basis}
+    Eine \textit{geordnete Basis} von \(V\) ist ein Tupel \( (v_1,\ldots,v_n) \) 
+    an linear unabhängigen Vektoren, die \(V\) erzeugen.
+\end{karte}
+
+\end{document}
