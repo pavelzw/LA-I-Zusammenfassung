@@ -55,6 +55,14 @@
     \[ \ker(f) := \inverse{f}(\set{0}). \]
     Der Kern von \(f\) ist ein Untervektorraum.
 \end{karte}
+\begin{karte}{Definition Projektion}
+    Eine \textit{Projektion} ist eine lineare Abbildung \(p: V \rightarrow V\)
+    mit \(p \circ p = p\). Weiter gilt: 
+    \begin{itemize}
+        \item \(\id_V - p\) ist ebenfalls eine Projektion.
+        \item \(V = \Bild p \oplus \Bild (\id_V - p) \).
+    \end{itemize}     
+\end{karte}
 \begin{karte}{Geordnete Basis}
     Eine \textit{geordnete Basis} von \(V\) ist ein Tupel \( (v_1,\ldots,v_n) \) 
     an linear unabhängigen Vektoren, die \(V\) erzeugen.
@@ -210,15 +218,14 @@
         = A \cdot (\lambda \cdot B). \]
     \end{itemize}
 \end{karte}
-\subsection*{Dualräume} 
-
+\subsection*{Dualräume}
 \begin{karte}{Definition Dualraum}
     Der \textit{Dualraum} eines \(K\)-Vektorraums \(V\) ist der 
     \(K\)-Vektorraum 
     \[ V^* := \hom_K(V,K). \]
     Die Elemente von \(V*\) heißen auch \textit{\(K\)-Linearformen}.
 \end{karte}
-\begin{karte}{Definition Duale Abbildung}
+\begin{karte}{Definition duale Abbildung}
     Sei \( f : V \rightarrow W \) eine lineare Abbildung.\\
     Dann ist die zu f \textit{duale Abbildung}
     \[ f^* : W^* rightarrow V^*, \phi \mapsto \phi \circ f \]
