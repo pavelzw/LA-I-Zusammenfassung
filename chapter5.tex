@@ -63,7 +63,7 @@
     \end{itemize}
 \end{karte}
 \begin{karte}{Definition allgemeine lineare Gruppe}
-    Die \textit{allgemeine lineare Gruppe} \(GL_n(K)\) ist die Teilmenge 
+    Die \textit{allgemeine lineare Gruppe} \( \GL_n(K) \) ist die Teilmenge 
     der invertierbaren Matrizen in \(M_n\). \\ 
     Bezüglich der Matrixmultiplikation bildet sie eine Gruppe.
 \end{karte}
@@ -104,7 +104,7 @@
     Für zwei Basen \(B\) und \(C\) eines \(n\)-dimensionalen 
     \(K\)-Vektorraums \(V\) ist die zugehörige 
     \textit{Basiswechselmatrix}:
-    \[M_{B,C} := M_{B,C}(\id_V) \in GL_n(K) \]
+    \[M_{B,C} := M_{B,C}(\id_V) \in \GL_n(K) \]
     Ist nun \(f: V \rightarrow W\) eine lineare Abbildung und 
     \(B,B'\) Basen von \(V\) und \(C,C'\) Basen von \(W\), dann gilt:
     \[ M_{B',C'}(f) = M_{C,C'} \cdot M_{B,C}(f) \cdot M_{B',B}. \]
@@ -121,5 +121,97 @@
     Dann gilt für jede lineare Abbildung \(f: V \rightarrow W\):
     \[M_{C^*,B^*}(f^*) = {(M_{B,C}(f))}^T\]
     Der Zeilen- und Spaltenrang einer Matrix stimmen überein.
+\end{karte}
+
+\subsection*{Zeilenstufenform und lineare Gleichungen}
+\begin{karte}{Definition Zeilenstufenform}
+    Eine Matrix in Zeilenstufenform sieht wie folgt aus:
+    \begin{equation*}
+        A =
+        \left(\mkern3mu
+          % \hskip-\arraycolsep
+          \begin{array}{*{13}c}
+            \multicolumn{1}{|c}{1} & (*) & (*) & (*) & (*) & (*) & (*) & \ldots & \ldots & \ldots & \ldots & \ldots & (*) \\
+            \cline{1-1}
+            0 & \multicolumn{1}{|c}{1} & (*) & (*) & (*) & (*) & (*)  & \ldots & \ldots & \ldots & \ldots & \ldots & (*) \\
+            \cline{2-3}
+            0 & 0 & 0 & \multicolumn{1}{|c}{1} & (*) & (*) & (*) & \ldots & \ldots & \ldots & \ldots & \ldots & (*)\\
+            \cline{4-6}
+            0 & 0 & 0 & 0 & 0 & 0 & \multicolumn{1}{|c}{1} & (*) & \ldots & \ldots & \ldots & \ldots & (*) \\
+            \cline{7-7}\cdashline{8-9}
+            \vdots & & & & \vdots & & & & \vdots & \multicolumn{1}{:c}{} & & & \vdots \\
+            0 & 0 & 0 & \ldots & \ldots & \ldots & \ldots & \ldots & 0 & \multicolumn{1}{|c}{1} & (*) & \ldots & (*) \\
+            \cline{10-13}
+            0 & 0 & 0 & \ldots  & \ldots & \ldots & \ldots & \ldots & \ldots & \ldots & 0 & 0 & 0 \\
+            0 & 0 & 0 & \ldots  & \ldots & \ldots & \ldots & \ldots & \ldots & \ldots & 0 & 0 & 0 \\
+            \vdots & & & & \vdots & & & & \vdots & & & & \vdots \\
+            0 & 0 & 0 & \ldots  & \ldots & \ldots & \ldots & \ldots & \ldots & \ldots & 0 & 0 & 0
+          \end{array}
+         \hskip-\arraycolsep\right)
+      \end{equation*}
+      Die Pivotindizes \( k_1,\ldots, k_r \) sind die jeweiligen Spalten, 
+      in denen in einer Zeile zum ersten Mal eine \( 1 \) vorkommt.
+\end{karte}
+\begin{karte}{Pivotspalten als Basis des Bilds}
+    Sei \( A \in M_{m,n}(K) \) in Zeilenstufenform.
+    Da die \(r\) Pivotspalten 
+    \[ A_{*k_1} = A \cdot e_{k_1} = L(A)(e_{k_1}), \ldots, 
+    A_{*k_r} = A \cdot e_{k_r} = L(A)(e_{k_r}) \]
+    linear unabhängig sind und \( \rk(A) = \rk(L(A)) = r\), 
+    bilden sie eine Basis des Bildes von \( L(A)\).
+\end{karte}
+\begin{karte}{Definition Lösungsmenge einer Matrix}
+    Seien \( A \in M_{m,n}(K) \) und \( b \in K^m \). Die Menge 
+    \[ V(A,b) := \set{ x \in K^n \;\vert \; A \cdot x = b } \]
+    heißt die Lösungsmenge von \( A \cdot x = b \).\\
+    Falls \( V(A,b) \neq \emptyset \), ist \(V\), ist 
+    \( V(A,b) \) für eine \gqq{spezielle} Lösung \( w\in V(A,b) \) 
+    der affine Unterraum 
+    \[ V(A,b) = w + \ker(L(A)). \]
+    Insbesondere ist \( V(A,0) = \ker(L(A)) \) ein Unterraum.
+\end{karte}
+\begin{karte}{Projektion vom Kern einer Matrix auf Nicht-Pivotvariablen}
+    Sei \( A \in M_{m,n}(K) \) in Zeilenstufenform. Dann ist die 
+    Projektion der Vektoren in \( V(A,0) \) auf deren Nicht-Pivotvariablen 
+    \[ K^n \supset V(A,0) \rightarrow K^{n-r}, (x_i)_{i\in\set{1,\ldots,n}} 
+    \mapsto (x_j)_{j\in\set{1,\ldots,n}\setminus\set{k_1,\ldots,k_r}} \]
+    ein Isomorphismus.\\
+    Das Urbild der kanonischen Basis von \( K^{n-r} \) unter der obigen 
+    Abbildung ist somit eine Basis von 
+    \[ V(A,0) = \ker(L(A)). \]
+\end{karte}
+\subsection*{Der Gauß-Algorithmus}
+\begin{karte}{Definition Gauß-Algorithmus}
+    Der \textit{Gauß-Algorithmus} überführt eine beliebige Matrix 
+    \( A \in M_{m,n}(K) \) durch eine elementare Zeilenoperation 
+    in Zeilenstufenform. Jede Zeilenoperation ist das Resultat der 
+    Matrixmultiplikation von links mit einer \textit{Elementarmatrix} 
+    aus \( \GL_m(K) \).
+\end{karte}
+\begin{karte}{Definition Elementarmatrix}
+    Die \textit{Elementarmatrizen} \(V_{j,k}, S_{j,k}(\lambda) 
+    \text{ für } \lambda \in K, \text{ und } M_j(\lambda) \text{ für }
+    \lambda \in K^* \) werden wie folgt definiert:\\
+    \begin{tabular}{p{1.75 cm}|p{4 cm}|p{4 cm}|p{1.5 cm}}
+        Matrix \(Z\) & Lineare Abbildung\newline \(x \mapsto Z \cdot x\) & Zeilenoperation\newline \(A\leadsto Z \cdot A\) & \(\inverse{Z}\) \\ 
+        \hline
+        \(V_{j,k}\) & Vertauschung der Koordinaten \(j\) und \(k\) & Vertauschung der \(j\)-ten und \(k\)-ten Zeile. \newline Notation: \( (j) \leftrightarrow (k) \) & \(V_{j,k}\) \\
+        \hline
+        \(S_{j,k}(\lambda)\) & Addition des \(\lambda\)-fachen \newline der \(k\)-ten zur \(j\)-ten \newline Komponente, d.\ h.\ \newline Scherung in der \((j,k)\)-Koordinatenebene & Addition des \(\lambda\)-fachen\newline der \(k\)-ten Zeile zur \(j\)-ten Zeile. \newline Notation: \((j) + \lambda \cdot (k) \) & \(S_{j,k}(-\lambda)\) \\
+        \hline
+        \(M_j(\lambda)\) & \(j\)-te Komponente wird mit \( \lambda \in K^* \) multipliziert, d.h. Streckung der \(j\)-ten Koordinatenachse & Multiplikation der \(j\)-ten Zeile mit \(\lambda\) \newline Notation: \(\lambda \cdot (j) \) & \(M_j(\inverse{\lambda})\)
+    \end{tabular}
+\end{karte}
+\begin{karte}{Lösungsmenge einer Matrix und elemtare Zeilenoperationen}
+    Elementare Zeilenoperationen lassen die Lösungsmenge eines 
+    linearen Gleichungssystems unverändert, d.\ h.\ sind 
+    \( A \in M_{m,n}(K), b \in K^m \) und \( Z_1,\ldots, Z_k \in M_m(K) \)
+    Elementarmatrizen und \( Z := Z_k \cdots Z_1 \), dann ist 
+    \[ V(A,b) = V(Z \cdot A, Z \cdot b). \]
+\end{karte}
+\begin{karte}{Definition Gaußsche Normalform}
+    Eine Matrix in Zeilenstufenform, in der alle Einträge der 
+    Pivotspalten bis auf einen Null sind, ist in 
+    \textit{Gaußscher Normalform}
 \end{karte}
 \end{document}
