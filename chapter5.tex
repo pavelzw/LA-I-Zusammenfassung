@@ -15,12 +15,21 @@
     Für eine invertierbare Matrix \(A \in M_n(K)\) ist \(B \in M_n(K)\) 
     mit \\
      \(A \cdot B = B \cdot A = I_n\)
-    eindeutig bestimmt, denn B entspricht unter \(L\) 
+    eindeutig bestimmt, denn \(B\) entspricht unter \(L\) 
     der Umkehrabbildung von \(L(A)\). \\
     Man nennt \(A^{-1} = B\) das \textit{Inverse} von \(A\).\\
     Des Weiteren gilt: 
     \[B \cdot A = I_n \Rightarrow A \cdot B = I_n\] 
-    und somit \(A^{-1} = B\).
+    und somit \(A^{-1} = B\).\\
+    Beispiel: 
+    \[ \begin{pmatrix}
+        1 & 1 \\
+        0 & 1
+    \end{pmatrix}^{-1} = 
+    \begin{pmatrix}
+        1 & -1 \\
+        0 & 1
+    \end{pmatrix} \]
     %Ein Beispiel ? 
 \end{karte}
 \begin{karte}{Definition Spaltenrang}
@@ -34,7 +43,7 @@
     Sei \(A\) eine endliche Teilmenge eines Vektorraums \(V\). \\
     Dann ist: 
     \[\dim(\langle A \rangle) = \text{max}\set{\abs B \;\vert\; 
-    A \supset B \text{ linear unabhängig }}\]
+    A \supset B \text{ linear unabhängig}}.\]
 \end{karte}
 \begin{karte}{Definition Zeilenrang}
     Der \textit{Zeilenrang} einer Matrix \(A \in M_{m,n}(K)\) ist 
@@ -44,13 +53,13 @@
     Sei \(A \in M_n(K)\). Dann gilt:
     \begin{itemize}
         \item[] \(A\) ist invertierbar.
-        \item[\(\Leftrightarrow\)] Das \(n\)-Tupel der 
+        \item[\(\Leftrightarrow \)] Das \(n\)-Tupel der 
         Spaltenvektoren von \(A\) ist eine Basis von \(K^n\).
-        \item[\(\Leftrightarrow\)] Das \(n\)-Tupel der 
+        \item[\(\Leftrightarrow \)] Das \(n\)-Tupel der 
         Spaltenvektoren von \(A\) ist linear unabhängig.
-        \item[\(\Leftrightarrow\)] Das \(n\)-Tupel der 
+        \item[\(\Leftrightarrow \)] Das \(n\)-Tupel der 
         Spaltenvektoren von \(A\) ist ein Erzeugendensystem. 
-        \item[\(\Leftrightarrow\)] \(\rk(A) = n\).        
+        \item[\(\Leftrightarrow \)] \(\rk(A) = n\).        
     \end{itemize}
 \end{karte}
 \begin{karte}{Definition Allgemeine lineare Gruppe}
@@ -65,7 +74,7 @@
     Basen der \(n\)-dimensionalen \(K\)-Vektorräume \(V\) bzw. \(W\).
     Dann ist \(t_{B,C}\) der Isomorphismus, der \(v_i\) auf \(w_i\) für 
     jedes \(i \in \set{1, \ldots ,n}\) abbildet: 
-    \[ t_{B,C}: V \rightarrow W \].
+    \[ t_{B,C}: V \rightarrow W, v_i \mapsto w_i. \]
 \end{karte}
 \begin{karte}{Definition Abbildungsmatrix}
     Für eine lineare Abbildung \(f:V \rightarrow W\) zwischen den
