@@ -5,22 +5,7 @@
 \RequirePackage{graphicx} %Grafiken einbinden
 \RequirePackage{amsmath,amssymb,amsthm}
 \RequirePackage{subfiles}
-
-\theoremstyle{definition}
-\newtheorem{satz}{Satz}[subsection]
-\newtheorem*{satz*}{Satz}
-\newtheorem{kor}[satz]{Korollar}
-\newtheorem{lem}[satz]{Lemma}
-
-\newtheorem{defi}[satz]{Definition}
-\newtheorem*{notation}{Notation}
-\newtheorem*{defi*}{Definition} % Für Sachen, die Definitionen sind, aber keine Nummer haben
-\newtheorem*{beh}{Behauptung}
-\newtheorem{bem}{Bemerkung}[satz]
-
-\theoremstyle{remark}
-\newtheorem{bsp}[bem]{Beispiel}
-\newtheorem{bspe}[bem]{Beispiele}
+\RequirePackage{arydshln}
 
 \let\oldforall\forall
 \renewcommand{\forall}{\oldforall \,}
@@ -53,5 +38,10 @@
 \DeclareMathOperator{\id}{id}
 \DeclareMathOperator{\Bild}{Bild}
 \DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\GL}{GL}
+
+\setlength\dashlinedash{0.4pt}
+\setlength\dashlinegap{1.4pt}
+\setlength\arrayrulewidth{0.4pt}
 
 \endinput
