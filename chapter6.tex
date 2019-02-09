@@ -116,4 +116,52 @@
     \end{itemize}
 \end{karte}
 
+\subsection*{Die Leibnizformel}
+
+\begin{karte}{Leibnizformel}
+    Für jedes \(A = (a_{ij}) \in M_n(K)\) gilt:
+    \[\det A = \sum_{\sigma\in\Sigma_n} 
+    \text{sign}(\sigma)\cdot a_{1\sigma(1)} \cdots a_{n\sigma(n)}. \]
+\end{karte}
+\begin{karte}{Defintion Permutation}
+    Eine Permutation \(\sigma \in \Sigma_n\) ist eine Abbildung, die 
+    Element von \((1, \ldots, n)\) vertauscht.\\
+    \(\Sigma_n\) ist wie folgt definiert: 
+    \[\Sigma_n = \set{f: \set{1, \ldots ,n} \rightarrow \set{1, \ldots ,n} 
+    \;\vert\; f \text{ bijektiv}}\]
+    Des Weiteren ist: 
+    \begin{itemize}
+        \item Eine Permutation, die zwei Zahlen vertaucht und die 
+        anderen festlässt, heißt \textit{Transposition}.
+        \item Eine \textit{Transposition}, die benachbarte Zahlen 
+        vertauscht, heißt \textit{Nachbarnvertauschung}.
+        \item Eine Permutation, die Komposition einer geraden Anzahl 
+        von Nachbarnvertauschungen ist, heißt \textit{gerade}, 
+        ansonsten \textit{ungerade}.
+    \end{itemize}
+\end{karte}
+\begin{karte}{Definition Signum einer Permutation}
+    Für eine Permutation \(\sigma\) definiere man: 
+    \[ \text{sign}(\sigma) := \begin{cases}
+        1 & \text{falls } \sigma \text{ gerade} \\
+        -1 & \text{falls } \sigma \text{ ungerade}
+    \end{cases} \]
+\end{karte}
+\begin{karte}{Definition Homomorphismus von Gruppen}
+    Eine Abbildung \(f: G \rightarrow H\) zwischen Gruppen, die 
+    \(\forall g_1,g_2 \in G\) folgende Bedingung erfüllen, \\
+    heißen \textit{Homomorphismus (von Gruppen)} oder 
+    \textit{Gruppenhomomorphismus}:
+    \[f(g_1 \cdot g_2) = f(g_1) \cdot f(g_2).\]
+    Es gilt: 
+    \begin{itemize}
+        \item \(\text{sign}: \Sigma_n \rightarrow \set{-1,1}\) 
+        ist ein Homomorphismus.
+        D.h. für alle Permutationen \(\sigma, \tau \) gilt:
+        \[\text{sign}(\sigma \circ \tau) = \text{sign}(\sigma) 
+        \cdot \text{sign}(\tau).\]
+        \item Das Signum einer Transposition ist \(-1\).
+    \end{itemize}
+\end{karte}
+
 \end{document}
