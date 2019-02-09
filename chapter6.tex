@@ -1,0 +1,75 @@
+\documentclass[main.tex]{subfiles}
+\begin{document}
+
+\section*{Determinaten}
+
+\subsection*{Die Determinantenfunktion}
+
+\begin{karte}{Definition n-Linearität, alternierend und Antisymmetrie}
+    Eine Abbildung \(f: M_n(K) \rightarrow K\) heißt
+    \begin{itemize}
+        \item \textit{n-linear}, wenn sie in jeder Zeile linear ist.*
+        \item \textit{alternierend}, wenn gilt: \\
+        Hat \(A \in M_n(K)\) zwei gleiche Zeilen, so ist  \(f(A) = 0\).
+       \item \textit{antisymmetrisch}, wenn gilt:\\
+        Entsteht \(A'\) aus \(A \in M_n(K)\) durch vertauschen zweier
+        Zeilen, so ist \(f(A') = -f(A)\).
+    \end{itemize}
+    \textit{n-linear} heißt: \\
+    Für jedes \(j \in \set{1,\ldots,n}\) und \(\forall v_1, 
+    \ldots,v_{j-1},v_{j+1},\ldots,v_n \in M_{1,n}(K)\) ist 
+    die \\ 
+    folgende Abbildung linear:
+    \[K^n \rightarrow K, v \mapsto f(v_1, \ldots,v_{j-1},v,v_{j+1},\ldots,v_n).\]
+\end{karte}
+\begin{karte}{Eigenschaften n-linearer, alternierender und antisymmetrischer Abbildungen}
+    \begin{itemize}
+        \item Eine \(n\)-lineare und alternierende Abbildung 
+        \(f: M_n(K) \rightarrow K\) ist antisymmetrisch.
+        \item Sei \(f: M_n(K) \rightarrow K n\)-linear und alternierend.
+        Elementare Zeilenumformungen verändern den Wert von f wie folgt: 
+        \[f(V_{j,k} \cdot A) = -f(A)\]
+        \[f(S_{j,k}(\lambda) \cdot A) = f(A)\]
+        \[f(M_j(\lambda) \cdot A) = \lambda \cdot f(A)\]
+    \end{itemize}
+\end{karte}
+\begin{karte}{Definition Determinate}
+    Für jedes \(c \in K\) gibt es genau eine \(n\)-lineare alternierende
+    Abbildung \(\Delta_c: M_n(K) \rightarrow K\) mit \(\Delta_c(I_n) = c \).
+    Die Determinate ist definiert als: 
+    \[\det := \Delta_1: M_n(K) \rightarrow K.\]
+\end{karte}
+\begin{karte}{Entwicklung der Determinante nach der \(j\)-ten Spalte}
+    Für \(A = (a_{pq}) \in M_n(K)\) und \(j \in \set{1, \ldots ,n}\) gilt:
+    \[\det A = \sum_{i=1}^n(-1)^{i+j}a_{ij} \cdot \det A[i,j].\]
+    Beispiel: \\
+    Wir entwickeln eine 2 \(\times\) 2-Matrix \(A = (a_{ij})\) nach der
+    ersten Spalte: 
+    \[ \begin{split}
+        \det 
+        \begin{pmatrix}
+        a_{11} & a_{12} \\
+        a_{21} & a_{22}    
+         \end{pmatrix} 
+    & = (-1)^{1+1}a_{11} \cdot \det [1,1] + (-1)^{2+1}a_{21} \cdot \det A[2,1] \\
+    & = a_{11} \cdot a_{22} - a_{21} \cdot a_{12}\\
+    & = \text{ Produkt Diagonale - Produkt Antidiagonale}
+    \end{split} 
+    \]
+\end{karte}
+\begin{karte}{Determinante einer oberen Dreiecksmatrix} 
+    Ist \(A = (a_{ij}) \in M_n(K)\) eine obere Dreiecksmatrix, d.h.
+    \(a_{ij} = 0\) für \(i > j\), dann ist \(\det A\) das Produkt der 
+    Diagonalelemente: 
+    \[\det A = a_{11} \cdots a_{nn}\]
+    Bei großen Matrizen ist die Entwicklung nach Spalten meist keine 
+    gute Berechnungsmethode. Stattdessen : 
+    \begin{itemize}
+       \item Man überführt \(A\) in  eine obere Dreiecksmatrix 
+       \(A'\) durch Zeilenvertauschungen und Zeilenumformungen des 
+       Typs Scherung.
+       \item Ist r die benötigte Anzahl von Zeilenvertauschungen, so gilt:
+       \[\det A = (-1)^r \det A' = (-1)^r a'_{11} \cdots a'_{nn} .\]
+    \end{itemize}
+\end{karte}
+\end{document}
