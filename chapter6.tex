@@ -95,4 +95,25 @@
          \inverse A = \inverse{(\det A)} \tilde{A}.\]
     \end{itemize}
 \end{karte}
+
+\subsection*{Determinante von Endomorphismen}
+
+\begin{karte}{Definition Endomorphismus und dessen Determinante}
+    Ein \textit{Endomorphismus} ist eine lineare Abbildung 
+    \(f: V \rightarrow V\).\\
+    Die Determinante eines Endomorphismus über einen endlich-dimensionalen 
+    Vektorraum \(V\) ist definiert als:
+    \[\det f := \det M_{BB}(f) \in K\]
+    für eine Basis \(B\) von \(V\).\\
+    \(\det M_{BB}(f)\) hängt nicht von der Wahl von B ab. 
+\end{karte}
+\begin{karte}{Folgerungen aus der Determinante eines Endomorphismus}
+    Sei \(f: V \rightarrow V\) ein Endomorphismus und \(\dim(V) < \infty\).
+    \begin{itemize}
+        \item \(\det f \neq 0 \Leftrightarrow f\) ist Isomorphismus.
+        \item \(\det g \circ f = \det g \cdot f\).
+        \item \(\det \id_V = 1\).
+    \end{itemize}
+\end{karte}
+
 \end{document}
