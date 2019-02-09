@@ -36,7 +36,7 @@
 \begin{karte}{Definition Determinate}
     Für jedes \(c \in K\) gibt es genau eine \(n\)-lineare alternierende
     Abbildung \(\Delta_c: M_n(K) \rightarrow K\) mit \(\Delta_c(I_n) = c \).
-    Die Determinate ist definiert als: 
+    Die \textit{Determinante} ist definiert als: 
     \[\det := \Delta_1: M_n(K) \rightarrow K.\]
 \end{karte}
 \begin{karte}{Entwicklung der Determinante nach der \(j\)-ten Spalte}
@@ -70,6 +70,29 @@
        Typs Scherung.
        \item Ist r die benötigte Anzahl von Zeilenvertauschungen, so gilt:
        \[\det A = (-1)^r \det A' = (-1)^r a'_{11} \cdots a'_{nn} .\]
+    \end{itemize}
+\end{karte}
+
+\subsection*{Determinante und Matrixprodukt}
+
+\begin{karte}{Determinanten von Matrixprodukten und transponierten Matrizen}
+    \begin{itemize}
+        \item \(\forall A,b \in M_n(K) \text{ gilt } 
+        \det(A \cdot B) = \det A \cdot \det B.\)
+        \item Für jedes \(A \in M_n(K) \text{ gilt } 
+        \det A^T = \det A.\)
+    \end{itemize}
+\end{karte}
+\begin{karte}{Definition komplementäre Matrix}
+    Für \(A \in M_n(K)\) ist \(\tilde{A} = (\tilde{a}_{ij}) \in M_n(K)\) mit
+    \[\tilde{a}_{ij} := (-1)^{i+j} \det A[j,i]\]
+    die zu \(A\) \textit{komplementäre Matrix}.
+    Des Weiteren gilt:
+    \begin{itemize}
+        \item \(\tilde{A} \cdot A = (\det A) \cdot I_n\)
+        \item \(A\) ist genau dann invertierbar, wenn \(\det A \neq 0\). Dann gelten: 
+        \[\det(\inverse A) = \inverse{(\det A)} \text{ und }
+         \inverse A = \inverse{(\det A)} \tilde{A}.\]
     \end{itemize}
 \end{karte}
 \end{document}
