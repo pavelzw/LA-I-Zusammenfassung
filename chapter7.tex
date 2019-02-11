@@ -1,7 +1,7 @@
 \documentclass[main.tex]{subfiles}
 
 \begin{document}
-\section*{Klassifikation von Endomorphismen I}
+\section*{Klassifikation von Endomorphismen}
 \subsection*{Eigenwerte und Eigenvektoren}
 
 \begin{karte}{Definition Eigenwert, Eigenvektor, Eigenraum\\von Endomorphismen}
@@ -93,5 +93,65 @@
     ist genau dann diagonalisierbar, wenn die Summe der 
     geometrischen Vielfachheiten aller Eigenwerte gleich 
     \(n\) ist.
+\end{karte}
+\subsection*{Das charakteristische Polynom} %Polynomringe dazu
+\begin{karte}{Definition Ring}
+    Ein \textit{Ring} ist eine Menge \(R\) mit zwei inneren 
+    Verknüpfungen \(+\) (Addition) und \( \cdot \) 
+    (Multiplikation) derart, dass 
+    \begin{enumerate}
+        \item \( (R, +) \) eine abelsche Gruppe ist.
+        \item \( \cdot \) assoziativ ist und ein neutrales 
+        Element besitzt.
+        \item \( \forall x,y,z \in R \) die Distributivgesetze 
+        \[ x \cdot (y + z) = x \cdot y + x \cdot z \]
+        \[ (y + z) \cdot x = y \cdot x + z \cdot x \]
+        gelten.\\ 
+        Ist darüber hinaus die Multiplikation kommutativ, nennt man 
+        \(R\) einen \textit{kommutativen Ring}. Die neutralen Elemente 
+        der Addition und Multiplikation werden mit \(0\) bzw.\ 
+        \(1\) bezeichnet.
+    \end{enumerate}
+\end{karte}
+\begin{karte}{Nullteiler}
+    Sei \(R\) ein Ring. Sind \(a,b \in R \setminus \set{0} \) 
+    zwei mit \( a \cdot b = 0 \), dann heißen \(a\) und \(b\) 
+    \textit{Nullteiler}. Ein Ring, der keine Nullteiler besitzt, 
+    heißt Nullteilerfrei.
+\end{karte}
+\begin{karte}{Ringhomomorphismus}
+    Seien \(R\) und \(S\) Ringe. Eine Abbildung 
+    \( \abb{f}{R}{S} \) heißt \textit{Ringhomomorphismus} oder 
+    \textit{Homomorphismus von Ringen}, wenn folgendes gilt:
+    \begin{enumerate}
+        \item \( \forall x,y \in R: f(x +_R y) = f(x) +_S f(y) \).
+        \item \( \forall x,y \in R: F(x \cdot_R y) 
+        = f(x) \cdot_S f(y) \).
+        \item \( f(1_R) = 1_S \).
+    \end{enumerate}
+    Ein bijektiver Ringhomomorphismus heißt 
+    \textit{Ringisomorphismus}.
+\end{karte}
+\begin{karte}{Definition Polynom}
+    Sei \(K\) ein Körper. Ein \textit{Polynom} \(p\) über \(K\) 
+    ist ein Element des\\
+    \(K\)-Untervektorraums
+    \[ \Abb_0(\N_0, K) := 
+    \set{ \abb{f}{\N_0}{K} \;\vert \; 
+    \inverse{f}(K \setminus \set{0}) \text{ endlich} } 
+    \subset \Abb(\N_0, K). \]
+\end{karte}
+\begin{karte}{Polynom als Vektorraum}
+    Sei \( X^n \) eine Abbildung, die das \(n\)-te Element auf 
+    \(1\) schickt und den Rest auf \(0\).\\
+    Da \( \set{X^n \;\vert \; n\in \N_0} \) eine Basis von 
+    \( \Abb(\N_0, K) \) ist, kann man jedes 
+    Polynom \(p\) eindeutig als endliche Summe schreiben 
+    \[ p = a_0 X^0 + \cdots + a_d X^d \] 
+    mit \textit{Koeffizienten} \( a_0 \in K \). Ist in dieser 
+    Darstellung \( a_d \neq 0 \), dann bezeichnet man \(d\) als 
+    \textit{Grad} von \(p\) und schreibt \( \deg(p) := d \). Man 
+    setzt \( \deg(0) = -\infty \). Man schreibt 
+    \[ K[X] := \Abb(\N_0, K). \]
 \end{karte}
 \end{document}
