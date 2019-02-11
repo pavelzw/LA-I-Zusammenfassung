@@ -1,0 +1,61 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+\section*{Klassifikation von Endomorphismen I}
+\subsection*{Eigenwerte und Eigenvektoren}
+
+\begin{karte}{Definition Eigenwert, Eigenvektor, Eigenraum\\von Endomorphismen}
+    Sei \( f: V \rightarrow V \) ein Endomorphismus. Unter 
+    einem \textit{Eigenvektor} von \(f\) zum \textit{Eigenwert} 
+    \(\lambda \in K\) versteht man einen Vektor \(v \neq 0\) aus 
+    \(V\) mit 
+    \[ f(v) = \lambda v. \]
+    Der \textit{Eigenraum} zu einem Eigenwert \( \lambda \) von 
+    \(f\) ist definiert als 
+    \[ E_\lambda(f) = \set{ v \in V \;\vert \; f(v) = \lambda v } 
+    = \ker(f - \lambda \cdot \id_V). \]
+\end{karte}
+\begin{karte}{Definition Eigenwert, Eigenvektor, Eigenraum\\von Matrizen}
+    Eigenvektoren, Eigenwerte und Eigenräume von 
+    \( L(A) : K^n \rightarrow K^n, A \in M_n(K) \), bezeichnet 
+    man auch als \textit{Eigenvektoren}, \textit{Eigenwerte}, 
+    \textit{Eigenräume} von \(A\).
+\end{karte}
+\begin{karte}{Berechnung von Eigenwerten\\ohne charakteristisches Polynom}
+    Sei \( f: V \rightarrow V \) ein Endomorphismus und 
+    \( \lambda \in K \). Dann ist \( \lambda \) genau dann ein 
+    Eigenwert von \( V \), wenn 
+    \( \ker(f - \lambda \id_V) \neq 0 \). Ist 
+    \( \dim_K(V) < \infty \), so ist diese Aussage äquivalent zu 
+    \[ \det(f - \lambda \id_V) = 0. \]
+\end{karte}
+\begin{karte}{Definition Spektrum}
+    Sei \(V\) ein \(K\)-Vektorraum. Sei 
+    \( f: V \rightarrow V \) ein Endomorphismus. Dann 
+    bezeichnen wir 
+    \[ \spec_K f := \set{ \lambda \in K 
+    \;\vert \; f - \lambda \id_V \text{ nicht invertierbar} } \]
+    als das \textit{Spektrum} von \(f\) über \(K\). Ist 
+    \( A \in M_n(K) \), so setzen wir 
+    \[ \spec_K A := \spec_K(L(A)). \]
+\end{karte}
+\begin{karte}{Eigenvektoren von Eigenwerten}
+    Sei \( \abb{f}{V}{V} \) ein Endomorphismus. Seien 
+    \( \lambda_1,\ldots,\lambda_n \) verschiedene Eigenwerte 
+    von \(f\). Sind \( v_1, \ldots, v_n \) Eigenvektoren von 
+    \(f\) zu den Eigenwerten \( \lambda_1, \ldots, \lambda_n \), 
+    so ist \( (v_1,\ldots,v_n) \) linear unabhängig.
+\end{karte}
+\begin{karte}{Direkte Summe der Eigenräume}
+    Ist \( \abb{f}{V}{V} \) ein Endomorphismus und sind 
+    \( \lambda_1,\ldots,\lambda_n \) verschiedene Eigenwerte 
+    von \(f\), so ist die Summe der Untervektorräume 
+    \( E_{\lambda_1}(f) + \cdots + E_{\lambda_n}(f) \) eine 
+    direkte Summe.
+\end{karte}
+\begin{karte}{Maximalanzahl Eigenwerte}
+    Ist \( \abb{f}{V}{V} \) ein Endomorphismus eines 
+    \(n\)-dimensionalen Vektorraums, so besitzt \(f\) 
+    höchstens \(n\) verschiedene Eigenwerte.
+\end{karte}
+\end{document}
