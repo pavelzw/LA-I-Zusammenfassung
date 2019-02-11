@@ -1,0 +1,157 @@
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+\section*{Klassifikation von Endomorphismen}
+\subsection*{Eigenwerte und Eigenvektoren}
+
+\begin{karte}{Definition Eigenwert, Eigenvektor, Eigenraum\\von Endomorphismen}
+    Sei \( f: V \rightarrow V \) ein Endomorphismus. Unter 
+    einem \textit{Eigenvektor} von \(f\) zum \textit{Eigenwert} 
+    \(\lambda \in K\) versteht man einen Vektor \(v \neq 0\) aus 
+    \(V\) mit 
+    \[ f(v) = \lambda v. \]
+    Der \textit{Eigenraum} zu einem Eigenwert \( \lambda \) von 
+    \(f\) ist definiert als 
+    \[ E_\lambda(f) = \set{ v \in V \;\vert \; f(v) = \lambda v } 
+    = \ker(f - \lambda \cdot \id_V). \]
+\end{karte}
+\begin{karte}{Definition Eigenwert, Eigenvektor, Eigenraum\\von Matrizen}
+    Eigenvektoren, Eigenwerte und Eigenräume von 
+    \( L(A) : K^n \rightarrow K^n, A \in M_n(K) \), bezeichnet 
+    man auch als \textit{Eigenvektoren}, \textit{Eigenwerte}, 
+    \textit{Eigenräume} von \(A\).
+\end{karte}
+\begin{karte}{Berechnung von Eigenwerten\\ohne charakteristisches Polynom}
+    Sei \( f: V \rightarrow V \) ein Endomorphismus und 
+    \( \lambda \in K \). Dann ist \( \lambda \) genau dann ein 
+    Eigenwert von \( V \), wenn 
+    \( \ker(f - \lambda \id_V) \neq 0 \). Ist 
+    \( \dim_K(V) < \infty \), so ist diese Aussage äquivalent zu 
+    \[ \det(f - \lambda \id_V) = 0. \]
+\end{karte}
+\begin{karte}{Definition Spektrum}
+    Sei \(V\) ein \(K\)-Vektorraum. Sei 
+    \( f: V \rightarrow V \) ein Endomorphismus. Dann 
+    bezeichnen wir 
+    \[ \spec_K f := \set{ \lambda \in K 
+    \;\vert \; f - \lambda \id_V \text{ nicht invertierbar} } \]
+    als das \textit{Spektrum} von \(f\) über \(K\). Ist 
+    \( A \in M_n(K) \), so setzen wir 
+    \[ \spec_K A := \spec_K(L(A)). \]
+\end{karte}
+\begin{karte}{Eigenvektoren von Eigenwerten}
+    Sei \( \abb{f}{V}{V} \) ein Endomorphismus. Seien 
+    \( \lambda_1,\ldots,\lambda_n \) verschiedene Eigenwerte 
+    von \(f\). Sind \( v_1, \ldots, v_n \) Eigenvektoren von 
+    \(f\) zu den Eigenwerten \( \lambda_1, \ldots, \lambda_n \), 
+    so ist \( (v_1,\ldots,v_n) \) linear unabhängig.
+\end{karte}
+\begin{karte}{Direkte Summe der Eigenräume}
+    Ist \( \abb{f}{V}{V} \) ein Endomorphismus und sind 
+    \( \lambda_1,\ldots,\lambda_n \) verschiedene Eigenwerte 
+    von \(f\), so ist die Summe der Untervektorräume 
+    \( E_{\lambda_1}(f) + \cdots + E_{\lambda_n}(f) \) eine 
+    direkte Summe.
+\end{karte}
+\begin{karte}{Maximalanzahl Eigenwerte}
+    Ist \( \abb{f}{V}{V} \) ein Endomorphismus eines 
+    \(n\)-dimensionalen Vektorraums, so besitzt \(f\) 
+    höchstens \(n\) verschiedene Eigenwerte.
+\end{karte}
+\subsection*{Diagonalisierbarkeit}
+\begin{karte}{Definition Diagonalisierbarkeit}
+    Ein Endomorphismus, für den eine Basis von Eigenvektoren 
+    existiert, heißt \textit{diagonalisierbar}. Eine Matrix 
+    \( A \in M_n(K) \) heißt \textit{diagonalisierbar}, falls 
+    \( L(A) \) diagonalisierbar ist.\\
+    Ein Endomorphismus eines \(n\)-dimensionalen Vektorraums, 
+    der \(n\) verschiedene Eigenwerte hat, ist diagonalisierbar. 
+    Für quadratische Matrizen gilt die analoge Aussage.\\
+    Eine Matrix \( A \in M_n(K) \) ist genau dann diagonalisierbar, 
+    wenn sie einer Diagonalmatrix ähnlich ist.
+\end{karte}
+\begin{karte}{Definition Ähnlichkeit}
+    Wir nennen zwei Matrizen \( A, B \in M_n(K) \) 
+    \textit{ähnlich} oder \textit{zueinander konjugiert}, 
+    wenn es ein \( S \in \GL_n(K) \) gibt mit 
+    \[ A = \inverse{S} \cdot B \cdot S. \]
+    Die durch Ähnlichkeit definierte Relation \( \sim \) 
+    auf \( M_n(K) \) ist eine Äquivalenzrelation.\\
+    Ähnliche Matrizen haben das gleiche Spektrum.
+\end{karte}
+\begin{karte}{Definition Diagonalmatrix}
+    Eine Matrix \( A = (a_{ij}) \in M_n(K) \) heißt 
+    \textit{Diagonalmatrix}, \\
+    wenn \( a_{ij} = 0 
+    \, \forall i,j \in \set{1,\ldots,n} \) mit \( i \neq j \).\\
+\end{karte}
+\begin{karte}{Definition geometrische Vielfachheit}
+    Sei \( \lambda \in K \) ein Eigenwert eines Endomorphismus 
+    \( f \). Die \textit{geometrische Vielfachheit} von 
+    \( \lambda \) ist die Dimension von \( E_\lambda(f) \).\\
+    Ein Endomorphismus eines \(n\)-dimensionalen Vektorraums 
+    ist genau dann diagonalisierbar, wenn die Summe der 
+    geometrischen Vielfachheiten aller Eigenwerte gleich 
+    \(n\) ist.
+\end{karte}
+\subsection*{Das charakteristische Polynom} %Polynomringe dazu
+\begin{karte}{Definition Ring}
+    Ein \textit{Ring} ist eine Menge \(R\) mit zwei inneren 
+    Verknüpfungen \(+\) (Addition) und \( \cdot \) 
+    (Multiplikation) derart, dass 
+    \begin{enumerate}
+        \item \( (R, +) \) eine abelsche Gruppe ist.
+        \item \( \cdot \) assoziativ ist und ein neutrales 
+        Element besitzt.
+        \item \( \forall x,y,z \in R \) die Distributivgesetze 
+        \[ x \cdot (y + z) = x \cdot y + x \cdot z \]
+        \[ (y + z) \cdot x = y \cdot x + z \cdot x \]
+        gelten.\\ 
+        Ist darüber hinaus die Multiplikation kommutativ, nennt man 
+        \(R\) einen \textit{kommutativen Ring}. Die neutralen Elemente 
+        der Addition und Multiplikation werden mit \(0\) bzw.\ 
+        \(1\) bezeichnet.
+    \end{enumerate}
+\end{karte}
+\begin{karte}{Nullteiler}
+    Sei \(R\) ein Ring. Sind \(a,b \in R \setminus \set{0} \) 
+    zwei mit \( a \cdot b = 0 \), dann heißen \(a\) und \(b\) 
+    \textit{Nullteiler}. Ein Ring, der keine Nullteiler besitzt, 
+    heißt Nullteilerfrei.
+\end{karte}
+\begin{karte}{Ringhomomorphismus}
+    Seien \(R\) und \(S\) Ringe. Eine Abbildung 
+    \( \abb{f}{R}{S} \) heißt \textit{Ringhomomorphismus} oder 
+    \textit{Homomorphismus von Ringen}, wenn folgendes gilt:
+    \begin{enumerate}
+        \item \( \forall x,y \in R: f(x +_R y) = f(x) +_S f(y) \).
+        \item \( \forall x,y \in R: F(x \cdot_R y) 
+        = f(x) \cdot_S f(y) \).
+        \item \( f(1_R) = 1_S \).
+    \end{enumerate}
+    Ein bijektiver Ringhomomorphismus heißt 
+    \textit{Ringisomorphismus}.
+\end{karte}
+\begin{karte}{Definition Polynom}
+    Sei \(K\) ein Körper. Ein \textit{Polynom} \(p\) über \(K\) 
+    ist ein Element des\\
+    \(K\)-Untervektorraums
+    \[ \Abb_0(\N_0, K) := 
+    \set{ \abb{f}{\N_0}{K} \;\vert \; 
+    \inverse{f}(K \setminus \set{0}) \text{ endlich} } 
+    \subset \Abb(\N_0, K). \]
+\end{karte}
+\begin{karte}{Polynom als Vektorraum}
+    Sei \( X^n \) eine Abbildung, die das \(n\)-te Element auf 
+    \(1\) schickt und den Rest auf \(0\).\\
+    Da \( \set{X^n \;\vert \; n\in \N_0} \) eine Basis von 
+    \( \Abb(\N_0, K) \) ist, kann man jedes 
+    Polynom \(p\) eindeutig als endliche Summe schreiben 
+    \[ p = a_0 X^0 + \cdots + a_d X^d \] 
+    mit \textit{Koeffizienten} \( a_0 \in K \). Ist in dieser 
+    Darstellung \( a_d \neq 0 \), dann bezeichnet man \(d\) als 
+    \textit{Grad} von \(p\) und schreibt \( \deg(p) := d \). Man 
+    setzt \( \deg(0) = -\infty \). Man schreibt 
+    \[ K[X] := \Abb(\N_0, K). \]
+\end{karte}
+\end{document}
