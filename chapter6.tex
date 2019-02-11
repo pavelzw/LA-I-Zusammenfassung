@@ -5,29 +5,29 @@
 
 \subsection*{Die Determinantenfunktion}
 
-\begin{karte}{Definition n-Linearität, alternierend und Antisymmetrie}
+\begin{karte}{Definition \(n\)-Linearität, alternierend und Antisymmetrie}
     Eine Abbildung \(f: M_n(K) \rightarrow K\) heißt
     \begin{itemize}
-        \item \textit{n-linear}, wenn sie in jeder Zeile linear ist.*
+        \item \textit{\(n\)-linear}, wenn sie in jeder Zeile linear ist. \( (*) \)
         \item \textit{alternierend}, wenn gilt: \\
         Hat \(A \in M_n(K)\) zwei gleiche Zeilen, so ist  \(f(A) = 0\).
        \item \textit{antisymmetrisch}, wenn gilt:\\
         Entsteht \(A'\) aus \(A \in M_n(K)\) durch vertauschen zweier
         Zeilen, so ist \(f(A') = -f(A)\).
     \end{itemize}
-    \textit{n-linear} heißt: \\
+    \( (*) \) \textit{\(n\)-linear} heißt: \\
     Für jedes \(j \in \set{1,\ldots,n}\) und \(\forall v_1, 
     \ldots,v_{j-1},v_{j+1},\ldots,v_n \in M_{1,n}(K)\) ist 
     die \\ 
     folgende Abbildung linear:
     \[K^n \rightarrow K, v \mapsto f(v_1, \ldots,v_{j-1},v,v_{j+1},\ldots,v_n).\]
 \end{karte}
-\begin{karte}{Eigenschaften n-linearer, alternierender und antisymmetrischer Abbildungen}
+\begin{karte}{Eigenschaften \(n\)-linearer, alternierender und antisymmetrischer Abbildungen}
     \begin{itemize}
         \item Eine \(n\)-lineare und alternierende Abbildung 
         \(f: M_n(K) \rightarrow K\) ist antisymmetrisch.
-        \item Sei \(f: M_n(K) \rightarrow K n\)-linear und alternierend.
-        Elementare Zeilenumformungen verändern den Wert von f wie folgt: 
+        \item Sei \(f: M_n(K) \rightarrow K\) \(n\)-linear und alternierend.
+        Elementare Zeilenumformungen verändern den Wert von \(f\) wie folgt: 
         \[f(V_{j,k} \cdot A) = -f(A)\]
         \[f(S_{j,k}(\lambda) \cdot A) = f(A)\]
         \[f(M_j(\lambda) \cdot A) = \lambda \cdot f(A)\]
@@ -41,9 +41,9 @@
 \end{karte}
 \begin{karte}{Entwicklung der Determinante nach der \(j\)-ten Spalte}
     Für \(A = (a_{pq}) \in M_n(K)\) und \(j \in \set{1, \ldots ,n}\) gilt:
-    \[\det A = \sum_{i=1}^n(-1)^{i+j}a_{ij} \cdot \det A[i,j].\]
+    \[\det A = \sum_{i=1}^n {(-1)}^{i+j}a_{ij} \cdot \det A[i,j].\]
     Beispiel: \\
-    Wir entwickeln eine 2 \(\times\) 2-Matrix \(A = (a_{ij})\) nach der
+    Wir entwickeln eine \(2 \times 2\)-Matrix \(A = (a_{ij})\) nach der
     ersten Spalte: 
     \[ \begin{split}
         \det 
@@ -51,25 +51,25 @@
         a_{11} & a_{12} \\
         a_{21} & a_{22}    
          \end{pmatrix} 
-    & = (-1)^{1+1}a_{11} \cdot \det [1,1] + (-1)^{2+1}a_{21} \cdot \det A[2,1] \\
+    & = {(-1)}^{1+1}a_{11} \cdot \det [1,1] + (-1)^{2+1}a_{21} \cdot \det A[2,1] \\
     & = a_{11} \cdot a_{22} - a_{21} \cdot a_{12}\\
-    & = \text{ Produkt Diagonale - Produkt Antidiagonale}
+    & = \text{Produkt Diagonale} - \text{Produkt Antidiagonale}
     \end{split} 
     \]
 \end{karte}
 \begin{karte}{Determinante einer oberen Dreiecksmatrix} 
-    Ist \(A = (a_{ij}) \in M_n(K)\) eine obere Dreiecksmatrix, d.h.
+    Ist \(A = (a_{ij}) \in M_n(K)\) eine obere Dreiecksmatrix, d.\ h.\ 
     \(a_{ij} = 0\) für \(i > j\), dann ist \(\det A\) das Produkt der 
     Diagonalelemente: 
     \[\det A = a_{11} \cdots a_{nn}\]
     Bei großen Matrizen ist die Entwicklung nach Spalten meist keine 
-    gute Berechnungsmethode. Stattdessen : 
+    gute Berechnungsmethode. Stattdessen: 
     \begin{itemize}
        \item Man überführt \(A\) in  eine obere Dreiecksmatrix 
        \(A'\) durch Zeilenvertauschungen und Zeilenumformungen des 
        Typs Scherung.
-       \item Ist r die benötigte Anzahl von Zeilenvertauschungen, so gilt:
-       \[\det A = (-1)^r \det A' = (-1)^r a'_{11} \cdots a'_{nn} .\]
+       \item Ist \(r\) die benötigte Anzahl von Zeilenvertauschungen, so gilt:
+       \[\det A = {(-1)}^r \cdot \det A' = {(-1)}^r \cdot a'_{11} \cdots a'_{nn} .\]
     \end{itemize}
 \end{karte}
 
@@ -78,14 +78,14 @@
 \begin{karte}{Determinanten von Matrixprodukten und transponierten Matrizen}
     \begin{itemize}
         \item \(\forall A,b \in M_n(K) \text{ gilt } 
-        \det(A \cdot B) = \det A \cdot \det B.\)
+        \det(A \cdot B) = \det A \cdot \det B\).
         \item Für jedes \(A \in M_n(K) \text{ gilt } 
-        \det A^T = \det A.\)
+        \det A^T = \det A\).
     \end{itemize}
 \end{karte}
 \begin{karte}{Definition komplementäre Matrix}
     Für \(A \in M_n(K)\) ist \(\tilde{A} = (\tilde{a}_{ij}) \in M_n(K)\) mit
-    \[\tilde{a}_{ij} := (-1)^{i+j} \det A[j,i]\]
+    \[\tilde{a}_{ij} := {(-1)}^{i+j} \cdot \det A[j,i]\]
     die zu \(A\) \textit{komplementäre Matrix}.
     Des Weiteren gilt:
     \begin{itemize}
@@ -98,12 +98,12 @@
 
 \subsection*{Determinante von Endomorphismen}
 
-\begin{karte}{Definition Endomorphismus und dessen Determinante}
+\begin{karte}{Definition Endomorphismus\\und dessen Determinante}
     Ein \textit{Endomorphismus} ist eine lineare Abbildung 
-    \(f: V \rightarrow V\).\\
+    \( f: V \rightarrow V \).\\
     Die Determinante eines Endomorphismus über einen endlich-dimensionalen 
     Vektorraum \(V\) ist definiert als:
-    \[\det f := \det M_{BB}(f) \in K\]
+    \[ \det f := \det M_{BB}(f) \in K \]
     für eine Basis \(B\) von \(V\).\\
     \(\det M_{BB}(f)\) hängt nicht von der Wahl von B ab. 
 \end{karte}
@@ -111,7 +111,7 @@
     Sei \(f: V \rightarrow V\) ein Endomorphismus und \(\dim(V) < \infty\).
     \begin{itemize}
         \item \(\det f \neq 0 \Leftrightarrow f\) ist Isomorphismus.
-        \item \(\det g \circ f = \det g \cdot f\).
+        \item \(\det g \circ f = \det g \cdot \det f\).
         \item \(\det \id_V = 1\).
     \end{itemize}
 \end{karte}
@@ -125,10 +125,10 @@
 \end{karte}
 \begin{karte}{Defintion Permutation}
     Eine Permutation \(\sigma \in \Sigma_n\) ist eine Abbildung, die 
-    Element von \((1, \ldots, n)\) vertauscht.\\
+    Elemente von \((1, \ldots, n)\) vertauscht.\\
     \(\Sigma_n\) ist wie folgt definiert: 
-    \[\Sigma_n = \set{f: \set{1, \ldots ,n} \rightarrow \set{1, \ldots ,n} 
-    \;\vert\; f \text{ bijektiv}}\]
+    \[\Sigma_n := \set{f: \set{1, \ldots ,n} \rightarrow \set{1, \ldots ,n} 
+    \;\vert \; f \bijektiv}\]
     Des Weiteren ist: 
     \begin{itemize}
         \item Eine Permutation, die zwei Zahlen vertaucht und die 
@@ -141,11 +141,11 @@
     \end{itemize}
 \end{karte}
 \begin{karte}{Definition Signum einer Permutation}
-    Für eine Permutation \(\sigma\) definiere man: 
+    Für eine Permutation \(\sigma \) definiere man: 
     \[ \text{sign}(\sigma) := \begin{cases}
         1 & \text{falls } \sigma \text{ gerade} \\
         -1 & \text{falls } \sigma \text{ ungerade}
-    \end{cases} \]
+    \end{cases}. \]
 \end{karte}
 \begin{karte}{Definition Homomorphismus von Gruppen}
     Eine Abbildung \(f: G \rightarrow H\) zwischen Gruppen, die 
@@ -157,9 +157,9 @@
     \begin{itemize}
         \item \(\text{sign}: \Sigma_n \rightarrow \set{-1,1}\) 
         ist ein Homomorphismus.
-        D.h. für alle Permutationen \(\sigma, \tau \) gilt:
-        \[\text{sign}(\sigma \circ \tau) = \text{sign}(\sigma) 
-        \cdot \text{sign}(\tau).\]
+        D.\ h.\ für alle Permutationen \(\sigma, \tau \) gilt:
+        \[\mathrm{sign}(\sigma \circ \tau) = \mathrm{sign}(\sigma) 
+        \cdot \mathrm{sign}(\tau).\]
         \item Das Signum einer Transposition ist \(-1\).
     \end{itemize}
 \end{karte}
