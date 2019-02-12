@@ -77,7 +77,9 @@
     \[ A = \inverse{S} \cdot B \cdot S. \]
     Die durch Ähnlichkeit definierte Relation \( \sim \) 
     auf \( M_n(K) \) ist eine Äquivalenzrelation.\\
-    Ähnliche Matrizen haben das gleiche Spektrum.
+    Ähnliche Matrizen haben das gleiche Spektrum.\\
+    Ähnliche Matrizen haben das geiche charakteristische Polynom.\\
+    Ähnliche Matrizen haben die gleiche Spur.
 \end{karte}
 \begin{karte}{Definition Diagonalmatrix}
     Eine Matrix \( A = (a_{ij}) \in M_n(K) \) heißt 
@@ -153,5 +155,131 @@
     \textit{Grad} von \(p\) und schreibt \( \deg(p) := d \). Man 
     setzt \( \deg(0) = -\infty \). Man schreibt 
     \[ K[X] := \Abb(\N_0, K). \]
+\end{karte}
+\begin{karte}{Definition Polynomring}
+    Durch die innere Verknüpfung 
+    \[ K[X] \times K[X] \rightarrow K[X], 
+    (p,q) \mapsto p \cdot q, \]
+    wobei \( p \cdot q \) für \( p = a_0 X^0 + a_1 X^1 
+    + \cdots + a_n X^n \) und \( q = b_0 X^0 + b_1 X^1 
+    + \cdots + b_m X^m \) als 
+    \[ p \cdot q := c_0 X^0 + c_1 X^1 + \ldots \]
+    \[ c_k = \sum_{i=0}^k a_i b_{k-i} \]
+    definiert wird (beachte, dass \(c_k = 0\) für 
+    \( k > n + m \)), wird \( K[X] \) zu einem kommutativen Ring. 
+    Das Nullelement der Addition ist das \textit{Nullpolynom}, 
+    also das Polynom, dessen Koeffizienten alle Null sind. 
+    Das Einselement ist \( 1_K \cdot X^0 \).
+\end{karte}
+\begin{karte}{Grad bei Polynommultiplikation}
+    Sei \(K\) ein Körper. 
+    \begin{itemize}
+        \item Für alle \( p,q \in K[X] \) gilt 
+        \( \deg(p \cdot q) = \deg p + \deg q \) mit der 
+        Konvention \( n + (-\infty) = -\infty \) für 
+        \( n \in \N_0 \cup \set{-\infty} \).
+        \item \( K[X] \) ist nullteilerfrei.
+    \end{itemize}
+\end{karte}
+\begin{karte}{Definition Polynomfunktion}
+    Sei \( p \in a_n X^n + \cdots + a_0 \in K[X] \). Die 
+    durch \(p\) \textit{definierte Polynomfunktion} ist 
+    \[ f_p : K \rightarrow K, x \mapsto a_n x^n + \cdots 
+    + a_1 x + a_0. \]
+    Man sagt, dass \( \alpha \in K \) eine \textit{Nullstelle} 
+    von \(p\) ist, falls \( f_p(\alpha) = 0 \). \\
+    Man schreibt auch \( p(\alpha) \) statt \(f_p(\alpha)\).\\
+    Wenn \(K\) unendlich ist, dann ist 
+    \( K[X] \rightarrow \Abb(K,K), p \mapsto f_p \) injektiv.
+\end{karte}
+\begin{karte}{Nullstellenlemma}
+    Sei \( p \in K[X] \) und \( \alpha \) eine Nullstelle 
+    von \( p \). Dann gibt es ein \( q\in K[X] \) mit 
+    \( p = (X - \alpha) \cdot q \).
+\end{karte}
+\begin{karte}{Definition algebraische Abgeschlossenheit}
+    Ein Körper \( K \), für den jedes Polynom 
+    \( p \in K[X] \) mit \( \deg p \geq 1 \) mindestens eine 
+    Nullstelle hat, heißt \textit{algebraisch abgeschlossen}.\\
+    Jeder Körper ist ein Teilkörper eines algebraisch 
+    abgeschlossenen Körpers.\\
+    Die komplexen Zahlen sind algebraisch abgeschlossen.
+\end{karte}
+\begin{karte}{Nullstellen eines algebraisch abgeschlossenen Polynoms}
+    Sei \(K\) ein algebraisch abgeschlossener Körper. Sei 
+    \( p \in K[X] \). Dann existieren 
+    \( \alpha_0, \alpha_1, \ldots, a_n \in K \) mit 
+    \[ p = \alpha_0 (X - \alpha_1) \cdots (X - \alpha_n). \]
+\end{karte}
+\begin{karte}{Vielfachheit einer Nullstelle}
+    Sei \( p \in K[X] \) ein Polynom mit einer Nullstelle 
+    \( \alpha \). Die maximale Zahl \( n \in \N \) derart, 
+    dass \( q \in K[X] \) mit 
+    \[ p = {(X - \alpha)}^n \cdot q \]
+    existiert, heißt \textit{Vielfachheit} der Nullstelle 
+    \( \alpha \).
+\end{karte}
+\begin{karte}{Das charakteristische Polynom}
+    Sei \( A \in M_n(K) \). Das charakteristische Polynom 
+    \( \chi_A \in K[X] \) ist definiert als 
+    \[ \chi_A(X) := \det(A - X \cdot I_n) \in K[X]. \]
+    Die Nullstellen von \( \chi_A \) sind genau die Eigenwerte 
+    von \(A\).
+\end{karte}
+\begin{karte}{Definition Spur}
+    Sei \( A = (a_{ij}) \in M_n(K) \). Die \textit{Spur} von 
+    \(A\) ist als die Summe der Diagonaleinträge von \(A\) 
+    definiert: 
+    \[ \Spur(A) := \sum_{i=1}^n a_{ii} \in K. \]
+\end{karte}
+\begin{karte}{Definition algebraische Vielfachheit}
+    Sei \( \lambda \in K \) ein Eigenwert von \(A \in M_n(K)\). 
+    Die \textit{algebraische Vielfachheit} des Eigenwerts 
+    \( \lambda \) ist die Vielfachheit von \( \lambda \) als 
+    Nullstelle von \( \chi_A \).
+\end{karte}
+\begin{karte}{Verhältnis geometrische und algebraische Vielfachheit}
+    Sei \( \lambda \in K \) ein Eigenwert von \( A \in M_n(K) \). 
+    Sei \( m_\lambda \) die algebraische Vielfachheit von 
+    \( \lambda \) und sei \( d_\lambda 
+    = \dim_K(\ker(A - \lambda I_n)) \) die geometrische 
+    Vielfachheit von \( \lambda \). Dann gilt
+    \[ d_\lambda \leq m_\lambda. \]
+\end{karte}
+\begin{karte}{Zusammenhang Linearfaktoren Diagonalisierbarkeit}
+    Sei \( A \in M_n(K) \). Dann sind äquivalent:
+    \begin{enumerate}
+        \item \(A\) ist diagonalisierbar.
+        \item Das charakteristische Polynom von \(A\) zerfällt 
+        in Linearfaktoren und die algebraische und geometrische 
+        Vielfachheit eines jeden Eigenwerts von \(A\) stimmen 
+        überein.
+    \end{enumerate}
+    Es kann zwei Gründe geben, dass \(A\) nicht diagonalisierbar 
+    ist:
+    \begin{enumerate}
+        \item Das charakteristische Polynom zerfällt nicht in 
+        Linearfaktoren.\\
+        Hier könnte man zu einem algebraisch 
+        abgeschlossenen Körper übergehen (etwa von \( \R \) 
+        nach \( \C \)).
+        \item Das charakteristische Polynom zerfällt, aber die 
+        algebraische Vielfachheit eines Eingenwerts \( \lambda \) 
+        ist größer als die geometrische Vielfachheit von 
+        \( \lambda \).
+    \end{enumerate}
+\end{karte}
+\subsection*{Klassifikation}
+\begin{karte}{Invarianten unter Ähnlichkeit}
+    Seien \( A, B \in M_n(K) \) ähnliche Matrizen. Dann gilt: 
+    \begin{itemize}
+        \item Es ist \( \rk A = \rk B \).
+        \item Es ist \( \spec A = \spec B \) und für alle 
+        \( \lambda \in \spec A \) gilt 
+        \[ \dim_K(E_\lambda(A)) = \dim_K(E_\lambda(B)). \]
+        \item Es ist \( \chi_A = \chi_B \).
+        \item Es ist \( \Spur A = \Spur B \).
+        \item Es ist \( \det A = \det B \).
+    \end{itemize}
 \end{karte}
 \end{document}
