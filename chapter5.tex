@@ -8,7 +8,7 @@
     Eine Matrix \(A \in M_n(K)\) ist \textit{invertierbar},
     wenn es eine Matrix \(B \in M_n(K)\) mit \(A \cdot B = I_n\) 
     und \(B \cdot A = I_n\) gibt.\\
-    A ist genau dann invertierbar, wenn \(L(A): K^n \rightarrow K^n \)
+    \(A\) ist genau dann invertierbar, wenn \(L(A): K^n \rightarrow K^n \)
     ein Isomorphismus ist.
 \end{karte}
 \begin{karte}{Definition Inverse einer Matrix}
@@ -38,7 +38,7 @@
     Der Spaltenrang von \(A\) ist die maximale Anzahl linear unabhängiger 
     Spaltenvektoren von \(A\).
 \end{karte}
-\begin{karte}{Lemma zur Dimension eines Erzeugnises}
+\begin{karte}{Lemma zur Dimension eines Erzeugnisses}
     Sei \(A\) eine endliche Teilmenge eines Vektorraums \(V\). \\
     Dann ist: 
     \[\dim(\langle A \rangle) = \text{max}\set{\abs B \;\vert \; 
@@ -49,17 +49,17 @@
     die maximale Anzahl linear unabhängiger Zeilenvektoren von A.
 \end{karte}
 \begin{karte}{Korollar zur Invertierbarkeit und Spaltenrang}
-    Sei \(A \in M_n(K)\). Dann gilt:
-    \begin{itemize}
-        \item[] \(A\) ist invertierbar.
-        \item[\(\Leftrightarrow \)] Das \(n\)-Tupel der 
-        Spaltenvektoren von \(A\) ist eine Basis von \(K^n\).
-        \item[\(\Leftrightarrow \)] Das \(n\)-Tupel der 
-        Spaltenvektoren von \(A\) ist linear unabhängig.
-        \item[\(\Leftrightarrow \)] Das \(n\)-Tupel der 
-        Spaltenvektoren von \(A\) ist ein Erzeugendensystem. 
-        \item[\(\Leftrightarrow \)] \(\rk(A) = n\).        
-    \end{itemize}
+    Sei \(A \in M_n(K)\). Dann gilt:\vspace{2mm}\\
+    \begin{tabular}{rl}
+        & \(A\) ist invertierbar.\vspace{1mm}\\
+        \( \Leftrightarrow \) & Das \(n\)-Tupel der 
+        Spaltenvektoren von \(A\) ist eine Basis von \(K^n\).\vspace{1mm}\\
+        \( \Leftrightarrow \) & Das \(n\)-Tupel der 
+        Spaltenvektoren von \(A\) ist linear unabhängig.\vspace{1mm}\\
+        \( \Leftrightarrow \) & Das \(n\)-Tupel der 
+        Spaltenvektoren von \(A\) ist ein Erzeugendensystem.\vspace{1mm}\\
+        \( \Leftrightarrow \) & \(\rk(A) = n\).        
+    \end{tabular}
 \end{karte}
 \begin{karte}{Definition allgemeine lineare Gruppe}
     Die \textit{allgemeine lineare Gruppe} \( \GL_n(K) \) ist die Teilmenge 
@@ -110,7 +110,7 @@
 \end{karte}
 \begin{karte}{Definition transponierte Matrix}
     Ist \(A = (a_{ij}) \in M_{m,n}(K)\) dann ist die \textit{transponierte Matrix}
-    \[ A^T  = (a_{kj}) \in M_{n,m}(K) \]
+    \[ A^T  = (a_{ji}) \in M_{n,m}(K). \]
 \end{karte}
 \begin{karte}{Satz dualer Basiwechsel}
     Seien \(B\) und \(C\) Basen der endlich-dimensionalen 
@@ -154,8 +154,8 @@
     Da die \(r\) Pivotspalten 
     \[ A_{*k_1} = A \cdot e_{k_1} = L(A)(e_{k_1}), \ldots, 
     A_{*k_r} = A \cdot e_{k_r} = L(A)(e_{k_r}) \]
-    linear unabhängig sind und \( \rk(A) = \rk(L(A)) = r\), 
-    bilden sie eine Basis des Bildes von \( L(A)\).
+    linear unabhängig sind und \( \rk A = \rk(L(A)) = r\), 
+    bilden sie eine Basis des Bilds von \( L(A)\).
 \end{karte}
 \begin{karte}{Definition Lösungsmenge einer Matrix}
     Seien \( A \in M_{m,n}(K) \) und \( b \in K^m \). Die Menge 

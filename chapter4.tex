@@ -161,7 +161,7 @@
 \begin{karte}{Definition Matrixmultiplikation}
     \begin{itemize}
         \item Für \(A = (a_{1i}) \in M_{1,n}(K)\) und 
-        \(B = (b_{i1}) \in M_{n,1}\) definiere: g
+        \(B = (b_{i1}) \in M_{n,1}\) definiere: 
         \[A \cdot B := \sum_{i=1}^n a_{1i}b_{i1} \in K\]
         \item Für \(A \in M_{n,p}(K)\) und \(B \in M_{p,q}(K)\) definiere
         \[A \cdot B = {(A_{i*} \cdot B_{*k})}_{\substack{i=1,\ldots,n \\ k=1,\ldots,q}} 
@@ -200,7 +200,7 @@
 \end{karte}
 \begin{karte}{Isomorphismus Matrix und lineare Abbildung}
     Die Abbildung 
-    \[ L : M_{m,n}(K) \rightarrow \hom_K(K^n,K^m), 
+    \[ \abb{L}{M_{m,n}(K)}{\hom_K(K^n,K^m)},\; 
     L(A)(x) := A x \]
     ist ein Isomorphismus von \(K\)-Vektorräumen.\\
     Insbesondere gilt \( \dim(\hom_K(K^n,K^m)) = mn \).
@@ -245,7 +245,7 @@
 \end{karte}
 \begin{karte}{Definition duale Abbildung}
     Sei \( \abb{f}{V}{W} \) eine lineare Abbildung.\\
-    Dann ist die zu f \textit{duale Abbildung}
+    Dann ist die zu \(f\) \textit{duale Abbildung}
     \[ \abb{f^*}{W^*}{V^*}, \phi \mapsto \phi \circ f \]
     ebenfalls linear.
     Ist \(g: W \rightarrow U\) eine weitere lineare Abbildung,
@@ -260,12 +260,17 @@
     ein Isomorphismus. Sei \( v_i^* := \inverse{f}(e_i) \). 
     Man nennt \( (v_1^*, \ldots, v_n^*) \) die zu 
     \( (v_1, \ldots, v_n) \) \textit{duale Basis}.\\
-    Insbesondere gilt \( \dim V^* = \dim V \).
+    Insbesondere gilt \( \dim V^* = \dim V \).\\
+    Explizit haben wir 
+    \[ v_i^*(v_j) = \begin{cases}
+        1, & i=j \\
+        0, & i \neq j
+    \end{cases}. \]
 \end{karte}
 \begin{karte}{Definition kanonische duale Abbildung}
     Die \textit{kanonische Abbildung} \( V \rightarrow V^{**} \),
     die einen Vektor \(v\) auf die Auswertung bei \(v\), also auf die 
-    Linearform \( V^* \rightarrow K, \phi \mapsto \phi(v)\), abbildet,
+    Linearform \( V^* \rightarrow K,\, \phi \mapsto \phi(v)\), abbildet,
     ist injektiv und, falls \(\dim(V) < \infty \), ein Isomorphismus.
 \end{karte}
 \begin{karte}{Der kanonische Isomorphismus im Dualraum}
