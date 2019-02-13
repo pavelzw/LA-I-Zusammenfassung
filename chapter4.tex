@@ -67,18 +67,18 @@
     Eine \textit{geordnete Basis} von \(V\) ist ein Tupel \( (v_1,\ldots,v_n) \) 
     an linear unabhängigen Vektoren, die \(V\) erzeugen.
 \end{karte}
-\subsection*{Basen, Dimension und lineare Abbildungen}
-\begin{karte}{Satz der linearen Abbildung} %besserer Name?
+\subsection*{Basen und Dimensionen}
+\begin{karte}{Lineare Fortsetzung}
     Seien \(V\) und \(W\) Vektorräume und \( (v_1,\ldots,v_n) \) 
     eine geordnete Basis von \(V\). Dann gibt es zu jedem 
     \(n\)-Tupel \((w_1,\ldots,w_n)\) von Vektoren in \(W\) 
-    genau eine lineare Abbildung \( f: V \rightarrow W \) mit 
+    genau eine lineare Abbildung \( \abb{f}{V}{W} \) mit 
     \( f(v_i) = w_i \) für alle \( i \in \set{1,\ldots,n} \).
 \end{karte}
-\begin{karte}{Satz des Bilds der linearen Abbildung}%besserer Name?
+\begin{karte}{Eigenschaften des Bilds der linearen Abbildung}
     Seien \(V\) und \(W\) \(K\)-Vektorräume und 
     \((v_1,\ldots,v_n)\) eine Basis von \(V\). Sei 
-    \( f : V \rightarrow W \) eine lineare Abbildung. Dann gilt 
+    \( \abb{f}{V}{W} \) eine lineare Abbildung. Dann gilt 
     \begin{itemize}
         \item \( f \surjektiv \Leftrightarrow 
         (f(v_1),\ldots,f(v_n)) \) Erzeugendensystem.
@@ -95,12 +95,24 @@
 \end{karte}
 \begin{karte}{Universelle Eigenschaft des Quotienten}
     Sei \( U \subset V \) ein Untervektorraum und 
-    \( p : V \rightarrow V/U \) die kanonische Projektion. 
-    Sei \( f: V \rightarrow W \) eine lineare Abbildung 
-    \( \bar{f} : V/U \rightarrow W \), für die gilt:
+    \( \abb{p}{V}{V/U} \) die kanonische Projektion. 
+    Sei \( \abb{f}{V}{W} \) eine lineare Abbildung 
+    mit \( U \subset \ker f \). Dann gibt es genau eine 
+    lineare Abbildung \( \abb{\bar{f}}{V/U}{W} \), 
+    für die gilt:
+    \begin{center}
+    \begin{tikzcd}
+        V \arrow{r}{f} \arrow{d}{p} & W \\
+        V/U \arrow[dashrightarrow]{ur}{\bar{f}}
+    \end{tikzcd}
+    \end{center}
     \[ f = \bar{f} \circ p. \]
     Wir haben zueinander inverse Isomorphismen:
-    %TODO TIKZ ODER SO
+    \begin{center}
+    \begin{tikzcd}
+        \hom_K(V/U, W) \arrow[bend left]{r}{g \mapsto g \circ p} & \set{ f \in \hom_K(V,W) \;\vert \; U \subset \ker f } \arrow[bend left]{l}{\bar{f} \mapsfrom f }
+    \end{tikzcd}
+    \end{center}
 \end{karte}
 \begin{karte}{Homomorphiesatz}
     Eine lineare Abbildung \(f: V \rightarrow W\) 
@@ -197,7 +209,13 @@
     Für \(m,n,p \in \N \) kommutiert das folgende Diagramm, d.h. 
     Matrixmultiplikation und Komposition linearer Abbildungen 
     entsprechen sich: 
-%TODO insert diagram
+    \begin{center}
+    \begin{tikzcd}
+        \hom_K(K^p, K^m) \times \hom_K(K^n, K^p) \arrow{rr}{(f,g) \mapsto f \circ g} && \hom_K(K^n, K^m) \\
+        \\
+        M_{m,p}(K) \times M_{p,n}(K) \ar{uu}{\substack{L \times L\\\overset{\sim}{=}}} \ar{rr}{(A,B) \mapsto A \cdot B} && M_{m,n}(K) \ar{uu}{L \; \overset{\sim}{=}}
+    \end{tikzcd}
+    \end{center}
 \end{karte}
 \begin{karte}{Rechenregeln Matrixmultiplikation}
     Seien \( m,n,p,q \in \N \).
@@ -226,7 +244,7 @@
     Die Elemente von \(V^*\) heißen auch \textit{\(K\)-Linearformen}.
 \end{karte}
 \begin{karte}{Definition duale Abbildung}
-    Sei \( f : V \rightarrow W \) eine lineare Abbildung.\\
+    Sei \( \abb{f}{V}{W} \) eine lineare Abbildung.\\
     Dann ist die zu f \textit{duale Abbildung}
     \[ \abb{f^*}{W^*}{V^*}, \phi \mapsto \phi \circ f \]
     ebenfalls linear.
@@ -237,7 +255,7 @@
     Sei \( (v_1, \ldots, v_n) \) eine Basis eines 
     \(n\)-dimensionalen Vektorraums \(V\). Dann ist 
     die lineare Abbildung 
-    \[ f : V^* \rightarrow K^n, 
+    \[ \abb{f}{V^*}{K^n}, 
     \phi \mapsto (\phi(v_1), \ldots, \phi(v_n)) \]
     ein Isomorphismus. Sei \( v_i^* := \inverse{f}(e_i) \). 
     Man nennt \( (v_1^*, \ldots, v_n^*) \) die zu 
@@ -250,13 +268,13 @@
     Linearform \( V^* \rightarrow K, \phi \mapsto \phi(v)\), abbildet,
     ist injektiv und, falls \(\dim(V) < \infty \), ein Isomorphismus.
 \end{karte}
-\begin{karte}{Satz vom kanonischen Kernisomorphismus}%besserer Name? 
-    Sei \( f: V \rightarrow W \) linear. Es gibt einen kanonischen 
+\begin{karte}{Der kanonische Isomorphismus im Dualraum}
+    Sei \( \abb{f}{V}{W} \) linear. Es gibt einen kanonischen 
     Isomorphismus 
     \[ \ker(f^*) \overset{\sim}{=} {(W/\Bild(f))}^*. \]
 \end{karte}
 \begin{karte}{Äquivalenzsatz der dualen Abbildung}
-    Für eine lineare Abbildung \( f: V \rightarrow W \) 
+    Für eine lineare Abbildung \( \abb{f}{V}{W} \) 
     zwischen endlich-dimensionalen Vektorräumen gelten:
     \begin{itemize}
         \item \( f \injektiv \Leftrightarrow f^* \surjektiv \).

@@ -4,8 +4,11 @@
 \RequirePackage[utf8]{inputenc} %Umlaute
 \RequirePackage{graphicx} %Grafiken einbinden
 \RequirePackage{amsmath,amssymb,amsthm}
+\newcommand\mapsfrom{\mathrel{\reflectbox{\ensuremath{\mapsto}}}}
 \RequirePackage{subfiles}
 \RequirePackage{arydshln}
+\RequirePackage{tikz}
+\usetikzlibrary{cd}
 
 \let\oldforall\forall
 \renewcommand{\forall}{\oldforall \,}
