@@ -5,7 +5,7 @@
 \section*{Vektorräume}
 \subsection*{Der Begriff des Vektorraums}
 \begin{karte}{Definition Vektorraum}
-    Ein \( K \)-Vektorraum ist eine Menge \(V\) mit der inneren 
+    Ein \( K \)\textit{-Vektorraum} ist eine Menge \(V\) mit der inneren 
     Verknüpfung Vektoraddition 
     \[ V \times V \rightarrow V, (v,w) \mapsto v + w \]
     und der skalaren Multiplikation 
@@ -28,7 +28,7 @@
     \end{description}
 \end{karte}
 \begin{karte}{Definition Untervektorraum}
-    Ein Untervektorraum \(U\) vom \(K\)-Vektorraum \(V\) ist eine nicht-leere
+    Ein \textit{Untervektorraum} \(U\) vom \(K\)-Vektorraum \(V\) ist eine nicht-leere
     Teilmenge \(U \subset V\), für die gilt: 
     \[\alpha \in K \text {und } u, v \in U \Rightarrow \alpha \cdot v \in U
     \text{ und } u + v \in U.\]
@@ -36,12 +36,12 @@
     (bez.\ der eingeschränkten Addition und skalaren Multiplikation).
 \end{karte}
 \begin{karte}{Definition affiner Unterraum}
-    Ist \(A\) ein affiner Unterraum \(A \subset V\) eines Vektorraums \(V\),
+    Ist \(A\) ein \textit{affiner Unterraum} \(A \subset V\) eines Vektorraums \(V\),
     so existieren ein Untervektorraum \(U \in V\) und ein Vektor \(v_0 \in V\) 
     und es gilt: 
     \[A = v_0 + U := \set{v_0 + v \;\vert \; v \in U}\] 
     Ist \(U = \set{\lambda \cdot w \;\vert \; \lambda \in K}\) 
-    mit \(w \in V \setminus \set{0}\) heißt \(A\) affine Gerade. \\
+    mit \(w \in V \setminus \set{0}\) heißt \(A\) \textit{affine Gerade}. \\
     Ein affiner Untervektorraum \(A \subset V\) ist genau 
     dann ein Untervektorraum, wenn \(0 \in A\).
 \end{karte}
@@ -51,30 +51,30 @@
     \( {(\lambda_j)}_{j \in J} \) von Skalaren in 
     \(K\) und eine Familie von Vektoren 
     \( {(v_j)}_{j \in J} \) in \(V\), ist \(v\) eine 
-    Linearkombination der Vektoren \(v_j, j \in J\), falls: 
+    \textit{Linearkombination} der Vektoren \(v_j, j \in J\), falls: 
     \[v = \sum_{j \in J} \lambda_j v_j. \]
 \end{karte}
 \begin{karte}{Definition Erzeugnis}
-    Das Erzeugnis von \(\langle S \rangle \) ist die Menge 
+    Das \textit{Erzeugnis} von \(\langle S \rangle \) ist die Menge 
     aller Linearkombinationen von Vektoren aus \(S \subset V\). \\
     Man definiert \(\langle \emptyset \rangle : = \set{0}\). \\
     Das Erzeugnis von \(S\) ist ein Untervektorraum von \(V\), 
     der \(S\) enthält.
 \end{karte}
 \begin{karte}{Definition Erzeugendensystem}
-    \(S\) ist ein Erzeugendensystem von \(V\), wenn \(\langle S \rangle = V\) \\
+    \(S\) ist ein \textit{Erzeugendensystem} von \(V\), wenn \(\langle S \rangle = V\) \\
     Man sagt, dass \(S\) den Vektorraum \(V\) erzeugt.
 \end{karte}
 \begin{karte}{Definition Lineare Unabhängigkeit}
-    Eine Teilmenge \(S \subset V\) ist genau dann linear unabhängig,
+    Eine Teilmenge \(S \subset V\) ist genau dann \textit{linear unabhängig},
     wenn für jede endliche Teilmenge \(E \subset S\) 
     und jede Familie von Skalaren \( {(\lambda_v)}_{v \in E}\) gilt: 
     \[ 0 = \sum_{v \in E} \lambda_v v \Rightarrow \lambda_v = 0 
     \text{ für jedes } v \in E. \]
-    Gilt dies nicht, dann ist \(S\) linear abhängig.
+    Gilt dies nicht, dann ist \(S\) \textit{linear abhängig}.
 \end{karte}
 \begin{karte}{Definition Basis}
-    Eine Basis ist eine linear unabhängige Teilmenge von \(V\), die
+    Eine \textit{Basis} ist eine linear unabhängige Teilmenge von \(V\), die
     \(V\) erzeugt. \\
     Eine Menge \(\set{v_1, \ldots ,v_n}\) von \(n\) paarweise verschiedenen 
     Vektoren in \(V\) ist genau dann eine Basis, wenn es für jeden \(v \in V\)
@@ -85,7 +85,7 @@
 \end{karte}
 \begin{karte}{Definition Kanonische Basis}
     \(e_i \in K^n\), \(i \in \set{1, \ldots, n}\) ist der 
-    \(i\)-te Basisvektor der kanonischen Basis
+    \(i\)-te Basisvektor der \textit{kanonischen Basis}
     \[ \set{e_1, \ldots,e_n}, \] für den gilt, dass die 
     \(i\)-te Komponente \(1\) ist und alle andere 
     Komponenten \(0\) sind.
@@ -130,7 +130,7 @@
     \end{itemize}
 \end{karte}
 \begin{karte}{Definition Dimension}
-    Die Mächtigkeit einer Basis von \(V\) heißt Dimension von \(V\). \\ 
+    Die Mächtigkeit einer Basis von \(V\) heißt \textit{Dimension} von \(V\). \\ 
     Je zwei Basen eines Vektorraums \(V\) haben die gleiche Mächtigkeit. \\
     Notation: \( \dim V \) oder \( \dim_K V \).
 \end{karte}
@@ -141,7 +141,7 @@
     die Summe von \(U_1\) und \(U_2\).
 \end{karte}
 \begin{karte}{Definition Direkte Summe von Vektorräumen}
-    Die direkte Summe \(U = U_1 \oplus U_2\) von zwei 
+    Die \textit{direkte Summe} \(U = U_1 \oplus U_2\) von zwei 
     Untervektorräumen \(U_1\) und \(U_2\) zeichnet sich durch 
     folgende Äquivalenzen aus: 
     \begin{itemize}
@@ -153,7 +153,7 @@
 \end{karte}
 \begin{karte}{Definition Komplement}
     Seien \(U,W \subset V\) Untervektorräume.\\
-    Gilt \(V = U \oplus W\), so ist W das Komplement von \(U\). \\
+    Gilt \(V = U \oplus W\), so ist W das \textit{Komplement} von \(U\). \\
     Jeder Untervektorraum besitzt ein Komplement.\\
     Ist \( V = U \oplus W \), so gilt \( \dim V = \dim U + \dim W \).
 \end{karte}
