@@ -127,22 +127,21 @@
     \begin{equation*}
         A =
         \left(\mkern3mu
-          \begin{array}{*{13}c}
-            \multicolumn{1}{|c}{1} & (*) & (*) & (*) & (*) & (*) & (*) & \ldots & \ldots & \ldots & \ldots & \ldots & (*) \\
+          \begin{array}{*{12}c}
+            \multicolumn{1}{|c}{1} & (*) & (*) & (*) & (*) & (*) & (*) & \ldots & \ldots & \ldots & \ldots & (*) \\
             \cline{1-1}
-            0 & \multicolumn{1}{|c}{1} & (*) & (*) & (*) & (*) & (*)  & \ldots & \ldots & \ldots & \ldots & \ldots & (*) \\
+            0 & \multicolumn{1}{|c}{1} & (*) & (*) & (*) & (*) & (*)  & \ldots & \ldots & \ldots & \ldots &  (*) \\
             \cline{2-3}
-            0 & 0 & 0 & \multicolumn{1}{|c}{1} & (*) & (*) & (*) & \ldots & \ldots & \ldots & \ldots & \ldots & (*)\\
+            0 & 0 & 0 & \multicolumn{1}{|c}{1} & (*) & (*) & (*) & \ldots & \ldots & \ldots & \ldots &  (*)\\
             \cline{4-6}
-            0 & 0 & 0 & 0 & 0 & 0 & \multicolumn{1}{|c}{1} & (*) & \ldots & \ldots & \ldots & \ldots & (*) \\
+            0 & 0 & 0 & 0 & 0 & 0 & \multicolumn{1}{|c}{1} & (*) & \ldots & \ldots & \ldots &  (*) \\
             \cline{7-7}\cdashline{8-9}
-            \vdots & & & & \vdots & & & & \vdots & \multicolumn{1}{:c}{} & & & \vdots \\
-            0 & 0 & 0 & \ldots & \ldots & \ldots & \ldots & \ldots & 0 & \multicolumn{1}{|c}{1} & (*) & \ldots & (*) \\
-            \cline{10-13}
-            0 & 0 & 0 & \ldots  & \ldots & \ldots & \ldots & \ldots & \ldots & \ldots & 0 & 0 & 0 \\
-            0 & 0 & 0 & \ldots  & \ldots & \ldots & \ldots & \ldots & \ldots & \ldots & 0 & 0 & 0 \\
-            \vdots & & & & \vdots & & & & \vdots & & & & \vdots \\
-            0 & 0 & 0 & \ldots  & \ldots & \ldots & \ldots & \ldots & \ldots & \ldots & 0 & 0 & 0
+            \vdots & & & & \vdots & & & & \vdots & \multicolumn{1}{:c}{} & & \vdots \\
+            0 & 0 & 0 & \ldots & \ldots & \ldots & \ldots & \ldots & 0 & \multicolumn{1}{|c}{1} & \ldots & (*) \\
+            \cline{10-12}
+            0 & 0 & 0 & \ldots  & \ldots & \ldots & \ldots & \ldots & \ldots & \ldots & 0 &  0 \\
+            \vdots & & & & \vdots & & & & \vdots & & & \vdots \\
+            0 & 0 & 0 & \ldots  & \ldots & \ldots & \ldots & \ldots & \ldots & \ldots & 0 &  0
           \end{array}
          \hskip-\arraycolsep\right)
       \end{equation*}
@@ -189,7 +188,7 @@
     Die \textit{Elementarmatrizen} \(V_{j,k}, S_{j,k}(\lambda) 
     \text{ für } \lambda \in K, \text{ und } M_j(\lambda) \text{ für }
     \lambda \in K^* \) werden wie folgt definiert:\\
-    \begin{tabular}{p{1.75 cm}|p{4 cm}|p{4 cm}|p{1.5 cm}}
+    \begin{tabular}{p{1 cm}|p{3 cm}|p{3 cm}|p{1 cm}}
         Matrix \(Z\) & Lineare Abbildung\newline \(x \mapsto Z \cdot x\) & Zeilenoperation\newline \(A\leadsto Z \cdot A\) & \(\inverse{Z}\) \\ 
         \hline
         \(V_{j,k}\) & Vertauschung der Koordinaten \(j\) und \(k\) & Vertauschung der \(j\)-ten und \(k\)-ten Zeile. \newline Notation: \( (j) \leftrightarrow (k) \) & \(V_{j,k}\) \\
